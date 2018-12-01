@@ -1,0 +1,6 @@
+framework module Pods_CodeStrokeAlert {
+  umbrella header "Pods-CodeStrokeAlert-umbrella.h"
+
+  export *
+  module * { export * }
+}

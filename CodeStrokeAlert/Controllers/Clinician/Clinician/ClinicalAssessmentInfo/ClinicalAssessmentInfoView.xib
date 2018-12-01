@@ -1,0 +1,1219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="sf-ui-display-bold.otf">
+            <string>SFUIDisplay-Bold</string>
+        </array>
+        <array key="sf-ui-display-medium.otf">
+            <string>SFUIDisplay-Medium</string>
+        </array>
+        <array key="sf-ui-display-semibold.otf">
+            <string>SFUIDisplay-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ClinicalAssessmentInfoView">
+            <connections>
+                <outlet property="activityIndicator" destination="puO-ho-agD" id="hw1-mi-285"/>
+                <outlet property="btn18GIVNo" destination="XbU-45-mf6" id="Atf-Qt-PJ3"/>
+                <outlet property="btn18GIVYes" destination="86L-vI-W3i" id="eGm-eR-Vbq"/>
+                <outlet property="btnArmDriftNo" destination="Vfc-aE-ejT" id="Cqf-Wg-lmg"/>
+                <outlet property="btnArmDriftUnknown" destination="G7D-nx-ifl" id="dMr-l4-bd1"/>
+                <outlet property="btnArmDriftYes" destination="uTw-w1-325" id="P7o-Aq-aw5"/>
+                <outlet property="btnFacialDropNo" destination="bhw-kw-zOI" id="4gS-ec-Yqk"/>
+                <outlet property="btnFacialDropUnknown" destination="62q-cE-c6w" id="smQ-9w-KQ2"/>
+                <outlet property="btnFacialDropYes" destination="hSO-AX-rTL" id="KJY-CJ-muQ"/>
+                <outlet property="btnIrregular" destination="YHd-yf-Fdy" id="4l9-ZZ-azp"/>
+                <outlet property="btnLikelyLVO" destination="DGk-wM-fBT" id="UUS-EH-QPP"/>
+                <outlet property="btnRegular" destination="mUP-Cb-zP5" id="wtv-Lk-LPL"/>
+                <outlet property="btnSpeechDifficultyNo" destination="JIa-qz-zLF" id="b1h-Hq-INS"/>
+                <outlet property="btnSpeechDifficultyUnknown" destination="RPd-uc-ag0" id="L4k-er-Q8g"/>
+                <outlet property="btnSpeechDifficultyYes" destination="j93-8N-7z8" id="87C-Q2-QjB"/>
+                <outlet property="btnSubmit" destination="ZmI-2N-qDg" id="f5Y-n7-BsF"/>
+                <outlet property="btnWeakGripNo" destination="HEl-km-o4a" id="jSP-Yg-Uxw"/>
+                <outlet property="btnWeakGripUnknown" destination="NVD-fe-2oN" id="GdE-p3-rDl"/>
+                <outlet property="btnWeakGripYes" destination="dM2-BJ-Jw3" id="lDN-dn-W1S"/>
+                <outlet property="container" destination="bbi-Lg-uUi" id="Yjk-s5-xQc"/>
+                <outlet property="segmentHemiparesis" destination="PAB-Hb-Ug6" id="cbd-ay-I29"/>
+                <outlet property="txtAlphasia" destination="LLU-eh-bgl" id="aoY-JZ-1qP"/>
+                <outlet property="txtArmMotorImpairment" destination="VSO-9c-PQr" id="tgc-od-C3R"/>
+                <outlet property="txtBlinkEye" destination="uAQ-tM-gbN" id="Th4-41-3wG"/>
+                <outlet property="txtBloodGlucose" destination="PDU-lK-PoN" id="hES-Tl-bbf"/>
+                <outlet property="txtDysarthria" destination="pn2-Ml-JjQ" id="kFQ-9Y-ROd"/>
+                <outlet property="txtExtinction" destination="xjp-hk-DgA" id="Oug-xD-Wb5"/>
+                <outlet property="txtFacialPalsy" destination="yE5-kz-E5Y" id="fpT-WY-Tyn"/>
+                <outlet property="txtGCS" destination="Reh-1R-xla" id="kg0-O1-TD3"/>
+                <outlet property="txtHeadAndGazeDeviation" destination="qU2-Hd-zE1" id="SU2-Ag-ckT"/>
+                <outlet property="txtHeartRate" destination="heA-wG-SGl" id="tcH-CI-bVx"/>
+                <outlet property="txtHorizontalGaze" destination="kb2-aR-d6N" id="Wq3-IC-AEf"/>
+                <outlet property="txtLeftArmDrift" destination="b3B-px-qrq" id="7zq-xL-YoK"/>
+                <outlet property="txtLeftLegDrift" destination="GGX-OG-7cA" id="XL1-BO-2jF"/>
+                <outlet property="txtLegMotorImpairment" destination="eul-oa-Vkw" id="itD-5L-0zh"/>
+                <outlet property="txtLevelOfConsciousness" destination="FXg-QK-APR" id="kir-u0-2uf"/>
+                <outlet property="txtLevelOfConsciousness_Rankin" destination="vqu-Ep-z5O" id="I9a-dy-wNC"/>
+                <outlet property="txtLimbAtaxia" destination="Cyk-ag-PdF" id="JiN-vI-0g5"/>
+                <outlet property="txtMonthAndAge" destination="xWl-f6-LXv" id="Tz8-A1-bIi"/>
+                <outlet property="txtNIHSS_Facial_Palsy" destination="tWe-Cm-idi" id="ViS-Ja-VAU"/>
+                <outlet property="txtOxygenSaturation" destination="VGg-Ne-xfD" id="xl4-Uh-Nsf"/>
+                <outlet property="txtRespiratoryRate" destination="RBV-w7-Uzr" id="iho-ME-0O2"/>
+                <outlet property="txtRightArmDrift" destination="V5M-79-3BH" id="CcF-Fm-ngu"/>
+                <outlet property="txtRightLegDrift" destination="8j8-ad-heD" id="wLC-KK-KVq"/>
+                <outlet property="txtSensation" destination="FQo-XP-Lvb" id="k6H-Cl-nGF"/>
+                <outlet property="txtTemperature" destination="sv2-ft-7hl" id="XqL-bD-xoU"/>
+                <outlet property="txtVisualFields" destination="c2e-Lh-HRt" id="csU-zn-7vx"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="bbi-Lg-uUi">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="2448"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MASS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTx-JE-21x">
+                    <rect key="frame" x="10" y="10" width="49.5" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="QhW-tH-dRU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="18"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s5C-UD-5i7">
+                    <rect key="frame" x="10" y="43" width="365" height="1"/>
+                    <color key="backgroundColor" red="0.69411764710000001" green="0.73333333329999995" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="ACK-sh-rOn"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xPe-r4-Iue">
+                    <rect key="frame" x="10" y="52" width="357" height="150"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6KD-Se-e46">
+                            <rect key="frame" x="0.0" y="0.0" width="357" height="30"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facial Droop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhu-5J-VOe">
+                                    <rect key="frame" x="0.0" y="0.0" width="95" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="95" id="mcQ-dh-LNb"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                    <color key="textColor" red="0.3294117647" green="0.43529411759999997" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSO-AX-rTL">
+                                    <rect key="frame" x="95" y="0.0" width="60" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="60" id="Oec-55-NS0"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
+                                    <state key="normal" title="  Yes" image="ic_ovel_deselect">
+                                        <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <state key="selected" image="ic_ovel_selected">
+                                        <color key="titleColor" red="0.20000000000000001" green="0.41176470590000003" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnFacialDroopOptClicked:" destination="-1" eventType="touchUpInside" id="s6g-Ph-x60"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhw-kw-zOI">
+                                    <rect key="frame" x="155" y="0.0" width="60" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="60" id="1OE-9Y-Eyb"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
+                                    <state key="normal" title="  No" image="ic_ovel_deselect">
+                                        <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <state key="selected" image="ic_ovel_selected">
+                                        <color key="titleColor" red="0.20000000000000001" green="0.41176470590000003" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnFacialDroopOptClicked:" destination="-1" eventType="touchUpInside" id="scH-TQ-Myb"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62q-cE-c6w">
+                                    <rect key="frame" x="215" y="0.0" width="142" height="30"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
+                                    <state key="normal" title="  Unknown" image="ic_ovel_deselect">
+                                        <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <state key="selected" image="ic_ovel_selected">
+                                        <color key="titleColor" red="0.20000000000000001" green="0.41176470590000003" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnFacialDroopOptClicked:" destination="-1" eventType="touchUpInside" id="EaF-bK-rDs"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="afT-yI-s8i"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="syZ-P1-pgk">
+                            <rect key="frame" x="0.0" y="40" width="357" height="30"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arm drift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uq4-Y4-jMh">
+                                    <rect key="frame" x="0.0" y="0.0" width="95" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="95" id="M6E-8y-q2m"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                    <color key="textColor" red="0.3294117647" green="0.43529411759999997" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTw-w1-325">
+                                    <rect key="frame" x="95" y="0.0" width="60" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="60" id="sMz-CH-EqL"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
+                                    <state key="normal" title="  Yes" image="ic_ovel_deselect">
+                                        <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <state key="selected" image="ic_ovel_selected">
+                                        <color key="titleColor" red="0.20000000000000001" green="0.41176470590000003" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnArmDriftOptClicked:" destination="-1" eventType="touchUpInside" id="YNz-a5-O9J"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfc-aE-ejT">
+                                    <rect key="frame" x="155" y="0.0" width="60" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="60" id="jQR-Zx-Djx"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
+                                    <state key="normal" title="  No" image="ic_ovel_deselect">
+                                        <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <state key="selected" image="ic_ovel_selected">
+                                        <color key="titleColor" red="0.20000000000000001" green="0.41176470590000003" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnArmDriftOptClicked:" destination="-1" eventType="touchUpInside" id="354-cI-vkW"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7D-nx-ifl">
+                                    <rect key="frame" x="215" y="0.0" width="142" height="30"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
+                                    <state key="normal" title="  Unknown" image="ic_ovel_deselect">
+                                        <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <state key="selected" image="ic_ovel_selected">
+                                        <color key="titleColor" red="0.20000000000000001" green="0.41176470590000003" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnArmDriftOptClicked:" destination="-1" eventType="touchUpInside" id="LNY-c3-pMn"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4qb-M4-rRJ">
+                            <rect key="frame" x="0.0" y="80" width="357" height="30"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weak grip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="135-Mo-lxl">
+                                    <rect key="frame" x="0.0" y="0.0" width="95" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="95" id="Nnc-dI-4UT"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                    <color key="textColor" red="0.3294117647" green="0.43529411759999997" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dM2-BJ-Jw3">
+                                    <rect key="frame" x="95" y="0.0" width="60" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="60" id="eyC-hb-pys"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
+                                    <state key="normal" title="  Yes" image="ic_ovel_deselect">
+                                        <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <state key="selected" image="ic_ovel_selected">
+                                        <color key="titleColor" red="0.20000000000000001" green="0.41176470590000003" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnWeakGripOptClicked:" destination="-1" eventType="touchUpInside" id="A4x-yp-0VR"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HEl-km-o4a">
+                                    <rect key="frame" x="155" y="0.0" width="60" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="60" id="ge8-r7-cxW"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
+                                    <state key="normal" title="  No" image="ic_ovel_deselect">
+                                        <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <state key="selected" image="ic_ovel_selected">
+                                        <color key="titleColor" red="0.20000000000000001" green="0.41176470590000003" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnWeakGripOptClicked:" destination="-1" eventType="touchUpInside" id="u1C-gK-Adb"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVD-fe-2oN">
+                                    <rect key="frame" x="215" y="0.0" width="142" height="30"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
+                                    <state key="normal" title="  Unknown" image="ic_ovel_deselect">
+                                        <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <state key="selected" image="ic_ovel_selected">
+                                        <color key="titleColor" red="0.20000000000000001" green="0.41176470590000003" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnWeakGripOptClicked:" destination="-1" eventType="touchUpInside" id="Qbq-XX-U9h"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fSs-pf-aXh">
+                            <rect key="frame" x="0.0" y="120" width="357" height="30"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speech Difficulty" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="3vM-C2-NsQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="95" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="95" id="EMI-ze-J9E"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                    <color key="textColor" red="0.3294117647" green="0.43529411759999997" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j93-8N-7z8">
+                                    <rect key="frame" x="95" y="0.0" width="60" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="60" id="csg-iK-mKu"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
+                                    <state key="normal" title="  Yes" image="ic_ovel_deselect">
+                                        <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <state key="selected" image="ic_ovel_selected">
+                                        <color key="titleColor" red="0.20000000000000001" green="0.41176470590000003" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnSpeechDifficultyOptClicked:" destination="-1" eventType="touchUpInside" id="VIA-JA-epU"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIa-qz-zLF">
+                                    <rect key="frame" x="155" y="0.0" width="60" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="60" id="T9L-LO-81t"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
+                                    <state key="normal" title="  No" image="ic_ovel_deselect">
+                                        <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <state key="selected" image="ic_ovel_selected">
+                                        <color key="titleColor" red="0.20000000000000001" green="0.41176470590000003" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnSpeechDifficultyOptClicked:" destination="-1" eventType="touchUpInside" id="SrL-tP-YoF"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPd-uc-ag0">
+                                    <rect key="frame" x="215" y="0.0" width="142" height="30"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
+                                    <state key="normal" title="  Unknown" image="ic_ovel_deselect">
+                                        <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <state key="selected" image="ic_ovel_selected">
+                                        <color key="titleColor" red="0.20000000000000001" green="0.41176470590000003" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnSpeechDifficultyOptClicked:" destination="-1" eventType="touchUpInside" id="qrf-Mb-NSc"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="aRe-8h-XkV"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="syZ-P1-pgk" firstAttribute="height" secondItem="6KD-Se-e46" secondAttribute="height" id="2oB-L5-ano"/>
+                        <constraint firstItem="4qb-M4-rRJ" firstAttribute="height" secondItem="syZ-P1-pgk" secondAttribute="height" id="bXd-q6-hU8"/>
+                    </constraints>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VITAL SIGNS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPX-4I-QEv">
+                    <rect key="frame" x="10" y="222" width="104" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="0Ix-ch-k2w"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="18"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="12O-5z-ANe">
+                    <rect key="frame" x="10" y="255" width="365" height="1"/>
+                    <color key="backgroundColor" red="0.69411764710000001" green="0.73333333329999995" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="3MT-3B-THh"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="arU-DK-1AQ">
+                    <rect key="frame" x="10" y="271" width="355" height="328"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Heart Rate (bpm)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="heA-wG-SGl">
+                            <rect key="frame" x="0.0" y="0.0" width="355" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="xo7-Rm-9F2"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                        </textField>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="z8E-ve-S1X">
+                            <rect key="frame" x="0.0" y="48" width="355" height="40"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="21D-vm-hA3">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="40"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUP-Cb-zP5">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="yXb-jp-n0x"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                            <state key="normal" title="  Regular" image="ic_ovel_deselect">
+                                                <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <state key="selected" image="ic_ovel_selected">
+                                                <color key="titleColor" red="0.20000000000000001" green="0.41176470590000003" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="btnHeartRythmClicked:" destination="-1" eventType="touchUpInside" id="X6n-OJ-3OL"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHd-yf-Fdy">
+                                            <rect key="frame" x="110" y="0.0" width="245" height="40"/>
+                                            <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                            <state key="normal" title="  Irregular" image="ic_ovel_deselect">
+                                                <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <state key="selected" image="ic_ovel_selected">
+                                                <color key="titleColor" red="0.20000000000000001" green="0.41176470590000003" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="btnHeartRythmClicked:" destination="-1" eventType="touchUpInside" id="sFe-Jl-gAD"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Respiratory Rate (bpm)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RBV-w7-Uzr">
+                            <rect key="frame" x="0.0" y="96" width="355" height="40"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Oxygen Saturation %" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VGg-Ne-xfD">
+                            <rect key="frame" x="0.0" y="144" width="355" height="40"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Temperature (C)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sv2-ft-7hl">
+                            <rect key="frame" x="0.0" y="192" width="355" height="40"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="GCS" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Reh-1R-xla">
+                            <rect key="frame" x="0.0" y="240" width="355" height="40"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Blood Glucose (mmol/L)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PDU-lK-PoN">
+                            <rect key="frame" x="0.0" y="288" width="355" height="40"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                        </textField>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RACE Score (2)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="del-mc-qzb">
+                    <rect key="frame" x="10" y="619" width="123.5" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="I0e-4f-lp2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="18"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uyy-Bo-2bF">
+                    <rect key="frame" x="10" y="652" width="365" height="1"/>
+                    <color key="backgroundColor" red="0.69411764710000001" green="0.73333333329999995" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="0jK-Qy-IuM"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="gl4-3T-nV6">
+                    <rect key="frame" x="10" y="668" width="355" height="306"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ajj-Xn-DTB">
+                            <rect key="frame" x="0.0" y="0.0" width="355" height="54.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facial palsy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhD-Jx-Zhn">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                    <color key="textColor" red="0.3294117647" green="0.43529411759999997" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Absent 0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yE5-kz-E5Y">
+                                    <rect key="frame" x="0.0" y="24.5" width="355" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="fd8-DC-kag"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bGd-TR-hGa">
+                            <rect key="frame" x="0.0" y="69.5" width="355" height="54.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arm motor impairment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uu4-wh-XvC">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                    <color key="textColor" red="0.3294117647" green="0.43529411759999997" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Absent 0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VSO-9c-PQr">
+                                    <rect key="frame" x="0.0" y="24.5" width="355" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="S2O-hA-gET"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NvK-dx-XSS">
+                            <rect key="frame" x="0.0" y="139" width="355" height="54.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leg motor impairment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVg-Nf-I7P">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                    <color key="textColor" red="0.3294117647" green="0.43529411759999997" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Absent 0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eul-oa-Vkw">
+                                    <rect key="frame" x="0.0" y="24.5" width="355" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="q3P-gv-Tdk"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JRe-vK-28e">
+                            <rect key="frame" x="0.0" y="208.5" width="355" height="54.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Head and gaze deviation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDj-6B-EfD">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                    <color key="textColor" red="0.3294117647" green="0.43529411759999997" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Absent 0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qU2-Hd-zE1">
+                                    <rect key="frame" x="0.0" y="24.5" width="355" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="BCE-z5-Vc4"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="g9R-sF-QJR">
+                            <rect key="frame" x="0.0" y="278" width="355" height="28"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hemiparesis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ido-zB-oyW">
+                                    <rect key="frame" x="0.0" y="0.0" width="177.5" height="28"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                    <color key="textColor" red="0.3294117647" green="0.43529411759999997" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PAB-Hb-Ug6">
+                                    <rect key="frame" x="177.5" y="0.0" width="177.5" height="29"/>
+                                    <segments>
+                                        <segment title="Left"/>
+                                        <segment title="Right"/>
+                                    </segments>
+                                </segmentedControl>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18G IV Cannula in cub fossa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqG-To-x3R">
+                    <rect key="frame" x="10" y="994" width="226.5" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="dVi-YL-aPk"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="18"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bP0-rr-GIa">
+                    <rect key="frame" x="10" y="1027" width="365" height="1"/>
+                    <color key="backgroundColor" red="0.69411764710000001" green="0.73333333329999995" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="WXv-AN-B01"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tdY-08-1Ig">
+                    <rect key="frame" x="10" y="1038" width="146" height="30"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86L-vI-W3i">
+                            <rect key="frame" x="0.0" y="0.0" width="70" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="6OU-BD-g29"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="14"/>
+                            <state key="normal" title="  Yes" image="ic_ovel_deselect">
+                                <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <state key="selected" image="ic_ovel_selected">
+                                <color key="titleColor" red="0.20000000000000001" green="0.41176470590000003" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="btn18GIVCannulaClicked:" destination="-1" eventType="touchUpInside" id="6YJ-18-zLc"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XbU-45-mf6">
+                            <rect key="frame" x="78" y="0.0" width="68" height="30"/>
+                            <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="14"/>
+                            <state key="normal" title="  No" image="ic_ovel_deselect">
+                                <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <state key="selected" image="ic_ovel_selected">
+                                <color key="titleColor" red="0.20000000000000001" green="0.41176470590000003" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="btn18GIVCannulaClicked:" destination="-1" eventType="touchUpInside" id="FxN-Xg-Quw"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="fix-M8-BW7"/>
+                    </constraints>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NIHSS (11)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7U-eP-kXr">
+                    <rect key="frame" x="10" y="1088" width="85.5" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="m5s-SF-Hil"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="18"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MZT-Yq-tD0">
+                    <rect key="frame" x="10" y="1121" width="365" height="1"/>
+                    <color key="backgroundColor" red="0.69411764710000001" green="0.73333333329999995" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="wRa-mV-TUc"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Nen-4G-QNY">
+                    <rect key="frame" x="10" y="1137" width="355" height="1027.5"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Eu1-0X-uZA">
+                            <rect key="frame" x="0.0" y="0.0" width="355" height="54.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level of consciousness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="084-kp-BhX">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                    <color key="textColor" red="0.3294117647" green="0.43529411759999997" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Movement to pain 3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FXg-QK-APR" customClass="DesignableTextField" customModule="CodeStrokeAlert" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="24.5" width="355" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="sU7-rd-19V"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="ic_down_arrow"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightviewWidth">
+                                            <real key="value" value="30"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JeS-kk-oZX">
+                            <rect key="frame" x="0.0" y="69.5" width="355" height="54.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month and age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHt-xa-YLr">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                    <color key="textColor" red="0.3294117647" green="0.43529411759999997" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Both correct" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xWl-f6-LXv" customClass="DesignableTextField" customModule="CodeStrokeAlert" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="24.5" width="355" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="UbW-oe-BH2"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="ic_down_arrow"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightviewWidth">
+                                            <real key="value" value="30"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3C5-EW-JGu">
+                            <rect key="frame" x="0.0" y="139" width="355" height="54.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blink eyes and squeeze hands" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="NcV-Cq-Az4">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                    <color key="textColor" red="0.3294117647" green="0.43529411759999997" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Both correct" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uAQ-tM-gbN" customClass="DesignableTextField" customModule="CodeStrokeAlert" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="24.5" width="355" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="2MZ-2n-li8"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="ic_down_arrow"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightviewWidth">
+                                            <real key="value" value="30"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gfK-yu-hxH">
+                            <rect key="frame" x="0.0" y="208.5" width="355" height="54.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horizontal gaze" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="vXe-om-6XV">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                    <color key="textColor" red="0.3294117647" green="0.43529411759999997" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Normal" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kb2-aR-d6N" customClass="DesignableTextField" customModule="CodeStrokeAlert" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="24.5" width="355" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="TH4-Ae-NOs"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="ic_down_arrow"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightviewWidth">
+                                            <real key="value" value="30"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qPs-jf-Iz1">
+                            <rect key="frame" x="0.0" y="278" width="355" height="54.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visual fields" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="XNK-cS-UiV">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                    <color key="textColor" red="0.3294117647" green="0.43529411759999997" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="No loss" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c2e-Lh-HRt" customClass="DesignableTextField" customModule="CodeStrokeAlert" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="24.5" width="355" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="bWq-c1-NcD"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="ic_down_arrow"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightviewWidth">
+                                            <real key="value" value="30"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="M8D-CF-O3b">
+                            <rect key="frame" x="0.0" y="347.5" width="355" height="54.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facial palsy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="abv-Yi-RkR">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                    <color key="textColor" red="0.3294117647" green="0.43529411759999997" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Normal" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tWe-Cm-idi" customClass="DesignableTextField" customModule="CodeStrokeAlert" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="24.5" width="355" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="nuE-YO-c2L"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="ic_down_arrow"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightviewWidth">
+                                            <real key="value" value="30"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="q2K-oh-NAC">
+                            <rect key="frame" x="0.0" y="417" width="355" height="54.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Left arm drift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="jG8-nO-Akj">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                    <color key="textColor" red="0.3294117647" green="0.43529411759999997" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="No drift for 10 seconds" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b3B-px-qrq" customClass="DesignableTextField" customModule="CodeStrokeAlert" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="24.5" width="355" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="Pb7-F0-1QK"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="ic_down_arrow"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightviewWidth">
+                                            <real key="value" value="30"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LLA-Sk-20w">
+                            <rect key="frame" x="0.0" y="486.5" width="355" height="54.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Right arm drift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="84o-O1-Jou">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                    <color key="textColor" red="0.3294117647" green="0.43529411759999997" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="No drift for 10 seconds" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V5M-79-3BH" customClass="DesignableTextField" customModule="CodeStrokeAlert" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="24.5" width="355" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="dFb-XN-F9k"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="ic_down_arrow"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightviewWidth">
+                                            <real key="value" value="30"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="MdB-th-082">
+                            <rect key="frame" x="0.0" y="556" width="355" height="54.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Left leg drift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="XdD-Z9-eaZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                    <color key="textColor" red="0.3294117647" green="0.43529411759999997" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="No drift for 10 seconds" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GGX-OG-7cA" customClass="DesignableTextField" customModule="CodeStrokeAlert" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="24.5" width="355" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="iU2-TR-Mjb"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="ic_down_arrow"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightviewWidth">
+                                            <real key="value" value="30"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3Jp-QY-vSU">
+                            <rect key="frame" x="0.0" y="625.5" width="355" height="54.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Right leg drift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="5V8-vL-yC9">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                    <color key="textColor" red="0.3294117647" green="0.43529411759999997" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="No drift for 10 seconds" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8j8-ad-heD" customClass="DesignableTextField" customModule="CodeStrokeAlert" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="24.5" width="355" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="UAd-jK-hSG"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="ic_down_arrow"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightviewWidth">
+                                            <real key="value" value="30"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FWq-Pd-66E">
+                            <rect key="frame" x="0.0" y="695" width="355" height="54.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Limb ataxia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="fJT-98-452">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                    <color key="textColor" red="0.3294117647" green="0.43529411759999997" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="No ataxia/paralysed/amputation/unable to understand" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cyk-ag-PdF" customClass="DesignableTextField" customModule="CodeStrokeAlert" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="24.5" width="355" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="J1k-F6-qoB"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="ic_down_arrow"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightviewWidth">
+                                            <real key="value" value="30"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XIM-7Q-ocm">
+                            <rect key="frame" x="0.0" y="764.5" width="355" height="54.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sensation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="nwR-7M-Fx4">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                    <color key="textColor" red="0.3294117647" green="0.43529411759999997" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Normal" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FQo-XP-Lvb" customClass="DesignableTextField" customModule="CodeStrokeAlert" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="24.5" width="355" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="hiG-Km-55u"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="ic_down_arrow"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightviewWidth">
+                                            <real key="value" value="30"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QBY-aO-EF4">
+                            <rect key="frame" x="0.0" y="834" width="355" height="54.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aphasia insert pictures here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="WH3-Vk-mma">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                    <color key="textColor" red="0.3294117647" green="0.43529411759999997" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Normal" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LLU-eh-bgl" customClass="DesignableTextField" customModule="CodeStrokeAlert" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="24.5" width="355" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="mxC-bT-9eG"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="ic_down_arrow"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightviewWidth">
+                                            <real key="value" value="30"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yL7-JF-q9k">
+                            <rect key="frame" x="0.0" y="903.5" width="355" height="54.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dysarthria insert words here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Tun-23-kL9">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                    <color key="textColor" red="0.3294117647" green="0.43529411759999997" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Normal/intubated" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pn2-Ml-JjQ" customClass="DesignableTextField" customModule="CodeStrokeAlert" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="24.5" width="355" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="ub1-He-Ekl"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="ic_down_arrow"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightviewWidth">
+                                            <real key="value" value="30"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mzZ-3w-Jel">
+                            <rect key="frame" x="0.0" y="973" width="355" height="54.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Extinction/inattention/neglect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="VLZ-o9-Z9m">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                    <color key="textColor" red="0.3294117647" green="0.43529411759999997" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Normal" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xjp-hk-DgA" customClass="DesignableTextField" customModule="CodeStrokeAlert" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="24.5" width="355" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="cnK-tI-09g"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="ic_down_arrow"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightviewWidth">
+                                            <real key="value" value="30"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modified Rankin Scale (Pre­Morbid)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SgE-Nh-qHz">
+                    <rect key="frame" x="10" y="2184.5" width="281" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="uC1-hb-Hxq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="18"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qE9-Qe-6Eh">
+                    <rect key="frame" x="10" y="2217.5" width="365" height="1"/>
+                    <color key="backgroundColor" red="0.69411764710000001" green="0.73333333329999995" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="pAH-fb-0AQ"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="5nE-KR-qKI">
+                    <rect key="frame" x="10" y="2233.5" width="355" height="54.5"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uIR-ia-SWL">
+                            <rect key="frame" x="0.0" y="0.0" width="355" height="54.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level of consciousness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="vlC-EJ-qpw">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="19.5"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                    <color key="textColor" red="0.3294117647" green="0.43529411759999997" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Modified Rankin scale (premorbid)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vqu-Ep-z5O" customClass="DesignableTextField" customModule="CodeStrokeAlert" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="24.5" width="355" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="qRV-P4-WAx"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="ic_down_arrow"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightviewWidth">
+                                            <real key="value" value="30"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGk-wM-fBT">
+                    <rect key="frame" x="87.5" y="2313" width="200" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="YfK-XZ-oxM"/>
+                        <constraint firstAttribute="width" constant="200" id="enI-uR-JLq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="18"/>
+                    <state key="normal" title="Likely LVO">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="btnLikelyLVOClicked:" destination="-1" eventType="touchUpInside" id="IdQ-3D-OXX"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZmI-2N-qDg">
+                    <rect key="frame" x="87.5" y="2383" width="200" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="Bqf-rZ-5A7"/>
+                        <constraint firstAttribute="width" constant="200" id="Eul-UD-zlS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="18"/>
+                    <state key="normal" title="SUBMIT">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="btnSubmitClicked:" destination="-1" eventType="touchUpInside" id="wdu-dU-kds"/>
+                    </connections>
+                </button>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="puO-ho-agD">
+                    <rect key="frame" x="169" y="120" width="37" height="37"/>
+                    <color key="color" red="1" green="0.3803921569" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Nen-4G-QNY" firstAttribute="top" secondItem="MZT-Yq-tD0" secondAttribute="bottom" constant="15" id="33P-df-7jb"/>
+                <constraint firstItem="c7U-eP-kXr" firstAttribute="leading" secondItem="bbi-Lg-uUi" secondAttribute="leading" constant="10" id="4JV-dT-bq7"/>
+                <constraint firstItem="s5C-UD-5i7" firstAttribute="top" secondItem="dTx-JE-21x" secondAttribute="bottom" constant="8" id="4tc-Bs-P2g"/>
+                <constraint firstItem="s5C-UD-5i7" firstAttribute="leading" secondItem="bbi-Lg-uUi" secondAttribute="leading" constant="10" id="5oy-6v-GM7"/>
+                <constraint firstAttribute="trailing" secondItem="12O-5z-ANe" secondAttribute="trailing" id="5p8-Ku-Ga2"/>
+                <constraint firstItem="xPe-r4-Iue" firstAttribute="leading" secondItem="s5C-UD-5i7" secondAttribute="leading" id="5rm-m8-gug"/>
+                <constraint firstAttribute="trailing" secondItem="xPe-r4-Iue" secondAttribute="trailing" constant="8" id="6Ao-XT-NEK"/>
+                <constraint firstAttribute="trailing" secondItem="MZT-Yq-tD0" secondAttribute="trailing" id="9zT-r7-owI"/>
+                <constraint firstItem="ZmI-2N-qDg" firstAttribute="top" secondItem="DGk-wM-fBT" secondAttribute="bottom" constant="25" id="AOT-LF-TbE"/>
+                <constraint firstItem="12O-5z-ANe" firstAttribute="leading" secondItem="UPX-4I-QEv" secondAttribute="leading" id="BdC-6D-8I4"/>
+                <constraint firstItem="UPX-4I-QEv" firstAttribute="top" secondItem="xPe-r4-Iue" secondAttribute="bottom" constant="20" id="Bt6-Eg-LLZ"/>
+                <constraint firstItem="arU-DK-1AQ" firstAttribute="top" secondItem="12O-5z-ANe" secondAttribute="bottom" constant="15" id="Bv7-SO-TPP"/>
+                <constraint firstItem="arU-DK-1AQ" firstAttribute="leading" secondItem="bbi-Lg-uUi" secondAttribute="leading" constant="10" id="C3o-Sh-xd6"/>
+                <constraint firstItem="Nen-4G-QNY" firstAttribute="leading" secondItem="bbi-Lg-uUi" secondAttribute="leading" constant="10" id="D6F-me-dYr"/>
+                <constraint firstItem="qE9-Qe-6Eh" firstAttribute="leading" secondItem="SgE-Nh-qHz" secondAttribute="leading" id="DFl-6a-5Zz"/>
+                <constraint firstItem="s5C-UD-5i7" firstAttribute="leading" secondItem="bbi-Lg-uUi" secondAttribute="leading" constant="10" id="Dds-g5-kzC"/>
+                <constraint firstItem="5nE-KR-qKI" firstAttribute="leading" secondItem="bbi-Lg-uUi" secondAttribute="leading" constant="10" id="FwR-fz-5Ql"/>
+                <constraint firstItem="puO-ho-agD" firstAttribute="top" secondItem="Tz5-hV-C2W" secondAttribute="top" constant="100" id="Gtb-Oo-Rgc"/>
+                <constraint firstItem="MZT-Yq-tD0" firstAttribute="leading" secondItem="c7U-eP-kXr" secondAttribute="leading" id="Hz1-lo-UdN"/>
+                <constraint firstItem="xPe-r4-Iue" firstAttribute="top" secondItem="s5C-UD-5i7" secondAttribute="bottom" constant="8" id="J49-6o-Z12"/>
+                <constraint firstItem="wqG-To-x3R" firstAttribute="leading" secondItem="bbi-Lg-uUi" secondAttribute="leading" constant="10" id="Jgc-dT-wgt"/>
+                <constraint firstItem="MZT-Yq-tD0" firstAttribute="top" secondItem="c7U-eP-kXr" secondAttribute="bottom" constant="8" id="M8G-zS-qPh"/>
+                <constraint firstAttribute="trailing" secondItem="5nE-KR-qKI" secondAttribute="trailing" constant="10" id="NYR-s2-6HH"/>
+                <constraint firstItem="wqG-To-x3R" firstAttribute="top" secondItem="gl4-3T-nV6" secondAttribute="bottom" constant="20" id="NmM-hs-eJa"/>
+                <constraint firstItem="puO-ho-agD" firstAttribute="centerX" secondItem="bbi-Lg-uUi" secondAttribute="centerX" id="Qgz-Gl-NqI"/>
+                <constraint firstAttribute="trailing" secondItem="qE9-Qe-6Eh" secondAttribute="trailing" id="TfT-n3-YK3"/>
+                <constraint firstItem="gl4-3T-nV6" firstAttribute="top" secondItem="Uyy-Bo-2bF" secondAttribute="bottom" constant="15" id="VJd-mw-Vn9"/>
+                <constraint firstItem="ZmI-2N-qDg" firstAttribute="centerX" secondItem="bbi-Lg-uUi" secondAttribute="centerX" id="Yfa-mc-wKR"/>
+                <constraint firstItem="dTx-JE-21x" firstAttribute="top" secondItem="bbi-Lg-uUi" secondAttribute="top" constant="10" id="ZyK-ld-W2X"/>
+                <constraint firstItem="dTx-JE-21x" firstAttribute="leading" secondItem="bbi-Lg-uUi" secondAttribute="leading" constant="10" id="dGC-xl-uMS"/>
+                <constraint firstAttribute="trailing" secondItem="Nen-4G-QNY" secondAttribute="trailing" constant="10" id="dm4-EC-LKb"/>
+                <constraint firstItem="bP0-rr-GIa" firstAttribute="leading" secondItem="wqG-To-x3R" secondAttribute="leading" id="eed-sE-JFO"/>
+                <constraint firstItem="gl4-3T-nV6" firstAttribute="leading" secondItem="bbi-Lg-uUi" secondAttribute="leading" constant="10" id="efh-BD-CJb"/>
+                <constraint firstItem="Uyy-Bo-2bF" firstAttribute="top" secondItem="del-mc-qzb" secondAttribute="bottom" constant="8" id="fW6-Kk-ODF"/>
+                <constraint firstAttribute="trailing" secondItem="Uyy-Bo-2bF" secondAttribute="trailing" id="g8V-s2-ygk"/>
+                <constraint firstItem="DGk-wM-fBT" firstAttribute="top" secondItem="5nE-KR-qKI" secondAttribute="bottom" constant="25" id="gao-Vo-etG"/>
+                <constraint firstItem="bP0-rr-GIa" firstAttribute="top" secondItem="wqG-To-x3R" secondAttribute="bottom" constant="8" id="gqU-rM-TAV"/>
+                <constraint firstItem="tdY-08-1Ig" firstAttribute="leading" secondItem="bbi-Lg-uUi" secondAttribute="leading" constant="10" id="hFA-NE-QVx"/>
+                <constraint firstAttribute="trailing" secondItem="s5C-UD-5i7" secondAttribute="trailing" id="kPO-pH-Dd4"/>
+                <constraint firstItem="qE9-Qe-6Eh" firstAttribute="top" secondItem="SgE-Nh-qHz" secondAttribute="bottom" constant="8" id="kpF-FM-Ylm"/>
+                <constraint firstItem="SgE-Nh-qHz" firstAttribute="leading" secondItem="bbi-Lg-uUi" secondAttribute="leading" constant="10" id="mBW-a1-GCA"/>
+                <constraint firstAttribute="trailing" secondItem="bP0-rr-GIa" secondAttribute="trailing" id="mWT-kI-RbU"/>
+                <constraint firstItem="del-mc-qzb" firstAttribute="top" secondItem="arU-DK-1AQ" secondAttribute="bottom" constant="20" id="nIr-co-h2u"/>
+                <constraint firstItem="c7U-eP-kXr" firstAttribute="top" secondItem="tdY-08-1Ig" secondAttribute="bottom" constant="20" id="oon-oj-f5S"/>
+                <constraint firstItem="tdY-08-1Ig" firstAttribute="top" secondItem="bP0-rr-GIa" secondAttribute="bottom" constant="10" id="p6f-kf-I9P"/>
+                <constraint firstItem="UPX-4I-QEv" firstAttribute="leading" secondItem="bbi-Lg-uUi" secondAttribute="leading" constant="10" id="qhk-dv-o90"/>
+                <constraint firstItem="5nE-KR-qKI" firstAttribute="top" secondItem="qE9-Qe-6Eh" secondAttribute="bottom" constant="15" id="sJB-kw-Hfj"/>
+                <constraint firstAttribute="trailing" secondItem="gl4-3T-nV6" secondAttribute="trailing" constant="10" id="sJW-Z2-H1c"/>
+                <constraint firstItem="12O-5z-ANe" firstAttribute="top" secondItem="UPX-4I-QEv" secondAttribute="bottom" constant="8" id="sop-2h-tqK"/>
+                <constraint firstAttribute="trailing" secondItem="arU-DK-1AQ" secondAttribute="trailing" constant="10" id="t3H-Dq-3cP"/>
+                <constraint firstItem="del-mc-qzb" firstAttribute="leading" secondItem="bbi-Lg-uUi" secondAttribute="leading" constant="10" id="vsL-of-Hz6"/>
+                <constraint firstItem="Uyy-Bo-2bF" firstAttribute="leading" secondItem="del-mc-qzb" secondAttribute="leading" id="xP0-Iq-cdg"/>
+                <constraint firstItem="DGk-wM-fBT" firstAttribute="centerX" secondItem="bbi-Lg-uUi" secondAttribute="centerX" id="yAx-vL-TbA"/>
+                <constraint firstItem="SgE-Nh-qHz" firstAttribute="top" secondItem="Nen-4G-QNY" secondAttribute="bottom" constant="20" id="zQe-sx-JXG"/>
+                <constraint firstAttribute="trailing" secondItem="s5C-UD-5i7" secondAttribute="trailing" id="zhB-Hn-I5L"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Tz5-hV-C2W"/>
+            <point key="canvasLocation" x="53.600000000000001" y="98.950524737631198"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_down_arrow" width="17" height="11"/>
+        <image name="ic_ovel_deselect" width="19" height="19"/>
+        <image name="ic_ovel_selected" width="19" height="19"/>
+    </resources>
+</document>

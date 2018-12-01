@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="sf-ui-display-bold.otf">
+            <string>SFUIDisplay-Bold</string>
+        </array>
+        <array key="sf-ui-display-medium.otf">
+            <string>SFUIDisplay-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PatientInfoView" customModule="CodeStrokeAlert" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="rhF-wd-nJK" id="FeT-PA-gbq"/>
+                <outlet property="btnFemale" destination="KcJ-v1-agi" id="4Va-BV-wpR"/>
+                <outlet property="btnMale" destination="ST0-NC-G4H" id="7ag-5p-xir"/>
+                <outlet property="btnSubmit" destination="pwu-zY-IB7" id="g5E-3F-cSA"/>
+                <outlet property="btnUnspecified" destination="RPX-uA-pux" id="ggt-rD-16d"/>
+                <outlet property="container" destination="drH-3U-nLs" id="mRr-ZT-nkC"/>
+                <outlet property="txtAddress" destination="2RV-51-gMc" id="G1V-rt-xJP"/>
+                <outlet property="txtDob" destination="TPM-mQ-C8R" id="Yoo-cp-ybd"/>
+                <outlet property="txtFirstName" destination="84c-e9-y0f" id="0a3-9Z-50E"/>
+                <outlet property="txtLastWell" destination="QQ2-5U-oxR" id="44g-Vl-AXB"/>
+                <outlet property="txtMedicare" destination="vx4-dS-GwR" id="feg-D4-x2C"/>
+                <outlet property="txtNOKContact" destination="Jie-VC-sqV" id="SBW-o2-kh6"/>
+                <outlet property="txtNextKin" destination="MHA-6v-P7Q" id="jbw-Mq-6bV"/>
+                <outlet property="txtSurname" destination="4JT-dA-sVM" id="vvC-XO-uqu"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="drH-3U-nLs">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bxB-9y-7ZY">
+                    <rect key="frame" x="10" y="10" width="355" height="444"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="84c-e9-y0f">
+                            <rect key="frame" x="0.0" y="0.0" width="355" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="RQp-Ts-W9N"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Surname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4JT-dA-sVM">
+                            <rect key="frame" x="0.0" y="48" width="355" height="40"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="DOB" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TPM-mQ-C8R" customClass="DesignableTextField" customModule="CodeStrokeAlert" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="96" width="355" height="40"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="ic_calendar"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="rightviewWidth">
+                                    <real key="value" value="25"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2RV-51-gMc">
+                            <rect key="frame" x="0.0" y="144" width="355" height="40"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                        </textField>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yYl-Hy-XJ6">
+                            <rect key="frame" x="0.0" y="192" width="355" height="60"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fq-xq-bJJ">
+                                    <rect key="frame" x="0.0" y="3" width="59.5" height="21.5"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="18"/>
+                                    <color key="textColor" red="0.3294117647" green="0.43529411759999997" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EKV-4a-LFY">
+                                    <rect key="frame" x="0.0" y="27.5" width="355" height="29.5"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ST0-NC-G4H">
+                                            <rect key="frame" x="0.0" y="0.0" width="81" height="29.5"/>
+                                            <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="17"/>
+                                            <state key="normal" title="  Male" image="ic_ovel_deselect">
+                                                <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <state key="selected" image="ic_ovel_selected">
+                                                <color key="titleColor" red="0.20000000000000001" green="0.41176470590000003" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="btnGenderClicked:" destination="-1" eventType="touchUpInside" id="G8E-1y-cVd"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KcJ-v1-agi">
+                                            <rect key="frame" x="89" y="0.0" width="104" height="29.5"/>
+                                            <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="17"/>
+                                            <state key="normal" title="  Female" image="ic_ovel_deselect">
+                                                <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <state key="selected" image="ic_ovel_selected">
+                                                <color key="titleColor" red="0.20000000000000001" green="0.41176470590000003" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="btnGenderClicked:" destination="-1" eventType="touchUpInside" id="AqL-4Z-6v4"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPX-uA-pux">
+                                            <rect key="frame" x="201" y="0.0" width="154" height="29.5"/>
+                                            <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="17"/>
+                                            <state key="normal" title="  Unspecified" image="ic_ovel_deselect">
+                                                <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <state key="selected" image="ic_ovel_selected">
+                                                <color key="titleColor" red="0.20000000000000001" green="0.41176470590000003" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="btnGenderClicked:" destination="-1" eventType="touchUpInside" id="4mn-TN-jGz"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="8fq-xq-bJJ" firstAttribute="leading" secondItem="yYl-Hy-XJ6" secondAttribute="leading" id="FuE-hA-ihu"/>
+                                <constraint firstAttribute="trailing" secondItem="EKV-4a-LFY" secondAttribute="trailing" id="KhN-0p-rNl"/>
+                                <constraint firstAttribute="height" constant="60" id="iZe-Pi-aDi"/>
+                                <constraint firstItem="8fq-xq-bJJ" firstAttribute="top" secondItem="yYl-Hy-XJ6" secondAttribute="top" constant="3" id="oPF-Kg-F6e"/>
+                                <constraint firstAttribute="bottom" secondItem="EKV-4a-LFY" secondAttribute="bottom" constant="3" id="rGf-OB-VFb"/>
+                                <constraint firstItem="EKV-4a-LFY" firstAttribute="leading" secondItem="yYl-Hy-XJ6" secondAttribute="leading" id="swQ-4F-Wlc"/>
+                                <constraint firstItem="EKV-4a-LFY" firstAttribute="top" secondItem="8fq-xq-bJJ" secondAttribute="bottom" constant="3" id="tp2-96-YFU"/>
+                            </constraints>
+                        </view>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Seen Well" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QQ2-5U-oxR">
+                            <rect key="frame" x="0.0" y="260" width="355" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="k81-O1-D6I"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Next of Kin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MHA-6v-P7Q">
+                            <rect key="frame" x="0.0" y="308" width="355" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="pp8-hY-wTv"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="NOK Contact" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jie-VC-sqV">
+                            <rect key="frame" x="0.0" y="356" width="355" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="tiD-R0-dJi"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Medicare" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vx4-dS-GwR">
+                            <rect key="frame" x="0.0" y="404" width="355" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="dFS-rg-rWA"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="TPM-mQ-C8R" firstAttribute="height" secondItem="84c-e9-y0f" secondAttribute="height" id="cgZ-VK-klR"/>
+                        <constraint firstItem="4JT-dA-sVM" firstAttribute="height" secondItem="84c-e9-y0f" secondAttribute="height" id="vMf-EO-gIX"/>
+                        <constraint firstItem="2RV-51-gMc" firstAttribute="height" secondItem="84c-e9-y0f" secondAttribute="height" id="yy0-l1-oAx"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwu-zY-IB7">
+                    <rect key="frame" x="87.5" y="474" width="200" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="5TC-lo-KPe"/>
+                        <constraint firstAttribute="width" constant="200" id="lGK-ou-2mW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="18"/>
+                    <state key="normal" title="SUBMIT">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="btnSubmitClicked:" destination="-1" eventType="touchUpInside" id="dqo-TM-COw"/>
+                    </connections>
+                </button>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="rhF-wd-nJK">
+                    <rect key="frame" x="169" y="100" width="37" height="37"/>
+                    <color key="color" red="1" green="0.3803921569" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="pwu-zY-IB7" firstAttribute="top" secondItem="bxB-9y-7ZY" secondAttribute="bottom" constant="20" id="5IK-Rl-4IG"/>
+                <constraint firstItem="rhF-wd-nJK" firstAttribute="top" secondItem="6SM-E5-Rmb" secondAttribute="top" constant="80" id="EDs-qh-xqX"/>
+                <constraint firstItem="bxB-9y-7ZY" firstAttribute="top" secondItem="drH-3U-nLs" secondAttribute="top" constant="10" id="KNk-1t-4sy"/>
+                <constraint firstItem="pwu-zY-IB7" firstAttribute="centerX" secondItem="drH-3U-nLs" secondAttribute="centerX" id="MXD-Ri-mFV"/>
+                <constraint firstItem="rhF-wd-nJK" firstAttribute="centerX" secondItem="drH-3U-nLs" secondAttribute="centerX" id="bwu-0p-nuE"/>
+                <constraint firstItem="bxB-9y-7ZY" firstAttribute="leading" secondItem="drH-3U-nLs" secondAttribute="leading" constant="10" id="mDl-xM-FRr"/>
+                <constraint firstAttribute="trailing" secondItem="bxB-9y-7ZY" secondAttribute="trailing" constant="10" id="msP-hf-hau"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="6SM-E5-Rmb"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_calendar" width="17" height="17"/>
+        <image name="ic_ovel_deselect" width="19" height="19"/>
+        <image name="ic_ovel_selected" width="19" height="19"/>
+    </resources>
+</document>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dWf-vO-aPP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="sf-ui-display-medium.otf">
+            <string>SFUIDisplay-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Cannula View Controller-->
+        <scene sceneID="zf1-5J-vix">
+            <objects>
+                <viewController storyboardIdentifier="CannulaViewController" id="dWf-vO-aPP" customClass="CannulaViewController" customModule="CodeStrokeAlert" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mdO-nv-Jx7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18G IV cannula in cub fossa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jV-Io-DLA">
+                                <rect key="frame" x="10" y="35" width="355" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="e9L-ik-yos"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="18"/>
+                                <color key="textColor" red="0.3294117647" green="0.43529411759999997" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XbE-Vf-yBs">
+                                <rect key="frame" x="10" y="73" width="112" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccu-fL-P7f">
+                                        <rect key="frame" x="0.0" y="0.0" width="52" height="30"/>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                        <state key="normal" title="  Yes" image="ic_ovel_deselect">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="selected" image="ic_ovel_selected">
+                                            <color key="titleColor" red="0.20000000000000001" green="0.41176470590000003" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btn18GIVClicked:" destination="dWf-vO-aPP" eventType="touchUpInside" id="lcZ-ZB-cYQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRk-N8-HOX">
+                                        <rect key="frame" x="60" y="0.0" width="52" height="30"/>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                        <state key="normal" title="  No" image="ic_ovel_deselect">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="selected" image="ic_ovel_selected">
+                                            <color key="titleColor" red="0.20000000000000001" green="0.41176470590000003" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btn18GIVClicked:" destination="dWf-vO-aPP" eventType="touchUpInside" id="BfA-kR-dEm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jBY-cX-wrF"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Izc-Tf-Bsy" customClass="RoundedButton" customModule="CodeStrokeAlert" customModuleProvider="target">
+                                <rect key="frame" x="265" y="73" width="90" height="30"/>
+                                <color key="backgroundColor" red="0.7725490196" green="0.82352941180000006" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Om8-tc-H7Q"/>
+                                    <constraint firstAttribute="width" constant="90" id="nd8-hU-osm"/>
+                                </constraints>
+                                <state key="normal" title="Unknown">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnUnknownClicked:" destination="dWf-vO-aPP" eventType="touchUpInside" id="4Fe-K0-k7G"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huJ-2p-vft" customClass="RoundedButton" customModule="CodeStrokeAlert" customModuleProvider="target">
+                                <rect key="frame" x="70.5" y="602" width="234" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="f9w-Jo-p9T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnNextClicked:" destination="dWf-vO-aPP" eventType="touchUpInside" id="RtK-ZT-z3o"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XbE-Vf-yBs" firstAttribute="leading" secondItem="7jV-Io-DLA" secondAttribute="leading" id="1wS-FD-dxd"/>
+                            <constraint firstAttribute="trailing" secondItem="Izc-Tf-Bsy" secondAttribute="trailing" constant="20" id="cZ8-Nq-RJu"/>
+                            <constraint firstAttribute="trailing" secondItem="7jV-Io-DLA" secondAttribute="trailing" constant="10" id="ft1-cE-vRq"/>
+                            <constraint firstItem="huJ-2p-vft" firstAttribute="centerX" secondItem="mdO-nv-Jx7" secondAttribute="centerX" id="hCG-ee-KqG"/>
+                            <constraint firstItem="huJ-2p-vft" firstAttribute="width" secondItem="mdO-nv-Jx7" secondAttribute="width" multiplier="1/1.6" id="llg-Pa-tdt"/>
+                            <constraint firstItem="Ykw-jj-DPT" firstAttribute="bottom" secondItem="huJ-2p-vft" secondAttribute="bottom" constant="20" id="pHv-33-Pat"/>
+                            <constraint firstItem="7jV-Io-DLA" firstAttribute="top" secondItem="Ykw-jj-DPT" secondAttribute="top" constant="15" id="poG-wd-d8B"/>
+                            <constraint firstItem="7jV-Io-DLA" firstAttribute="leading" secondItem="Ykw-jj-DPT" secondAttribute="leading" constant="10" id="sGA-dd-Rlm"/>
+                            <constraint firstItem="Izc-Tf-Bsy" firstAttribute="centerY" secondItem="XbE-Vf-yBs" secondAttribute="centerY" id="ub1-I8-SLc"/>
+                            <constraint firstItem="XbE-Vf-yBs" firstAttribute="top" secondItem="7jV-Io-DLA" secondAttribute="bottom" constant="8" id="vOR-ZB-a1g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ykw-jj-DPT"/>
+                    </view>
+                    <connections>
+                        <outlet property="btn18GIVNo" destination="TRk-N8-HOX" id="X8v-aN-18I"/>
+                        <outlet property="btn18GIVUnknown" destination="Izc-Tf-Bsy" id="37Y-v6-RAy"/>
+                        <outlet property="btn18GIVYes" destination="ccu-fL-P7f" id="AQm-ZG-xzh"/>
+                        <outlet property="btnNext" destination="huJ-2p-vft" id="Cbf-fg-EOY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tTh-Iu-ksn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="428" y="-183"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_ovel_deselect" width="19" height="19"/>
+        <image name="ic_ovel_selected" width="19" height="19"/>
+    </resources>
+</document>

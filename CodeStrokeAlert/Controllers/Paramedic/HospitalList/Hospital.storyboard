@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Fp-1Z-ssE">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="sf-ui-display-semibold.otf">
+            <string>SFUIDisplay-Semibold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Hospital View Controller-->
+        <scene sceneID="Bdw-VM-agP">
+            <objects>
+                <viewController storyboardIdentifier="HospitalViewController" id="3Fp-1Z-ssE" customClass="HospitalViewController" customModule="CodeStrokeAlert" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bz1-aR-Dhn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Hospital" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6F-L7-xUU">
+                                <rect key="frame" x="120.5" y="40" width="134.5" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2fP-cI-Zy7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="18"/>
+                                <color key="textColor" red="0.3294117647" green="0.43529411759999997" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomBorderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomBorderHeight">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GSf-LP-UEg">
+                                <rect key="frame" x="20" y="110" width="335" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="rqV-8X-BPt"/>
+                                </constraints>
+                            </view>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLj-Lp-A0a">
+                                <rect key="frame" x="50" y="120" width="275" height="180"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectorColor">
+                                        <color key="value" red="0.20000000000000001" green="0.41176470590000003" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="3Fp-1Z-ssE" id="AsQ-mk-RrL"/>
+                                    <outlet property="delegate" destination="3Fp-1Z-ssE" id="wE8-lV-wYT"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TnR-mg-ZAt" customClass="RoundedButton" customModule="CodeStrokeAlert" customModuleProvider="target">
+                                <rect key="frame" x="62.5" y="602" width="250" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="eI7-Mo-vlW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnNextClicked:" destination="3Fp-1Z-ssE" eventType="touchUpInside" id="wa4-mO-x2E"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="I6F-L7-xUU" firstAttribute="top" secondItem="qdi-O7-Boh" secondAttribute="top" constant="20" id="9KG-ae-oki"/>
+                            <constraint firstItem="GSf-LP-UEg" firstAttribute="centerX" secondItem="bz1-aR-Dhn" secondAttribute="centerX" id="HSp-FT-qyi"/>
+                            <constraint firstItem="dLj-Lp-A0a" firstAttribute="centerX" secondItem="GSf-LP-UEg" secondAttribute="centerX" id="YJI-As-gO6"/>
+                            <constraint firstItem="dLj-Lp-A0a" firstAttribute="leading" secondItem="GSf-LP-UEg" secondAttribute="leading" constant="30" id="Yat-n2-2cc"/>
+                            <constraint firstItem="TnR-mg-ZAt" firstAttribute="width" secondItem="bz1-aR-Dhn" secondAttribute="width" multiplier="1/1.5" id="faQ-zw-Kei"/>
+                            <constraint firstItem="dLj-Lp-A0a" firstAttribute="top" secondItem="GSf-LP-UEg" secondAttribute="top" constant="10" id="h5Z-cd-7yp"/>
+                            <constraint firstItem="I6F-L7-xUU" firstAttribute="centerX" secondItem="bz1-aR-Dhn" secondAttribute="centerX" id="kB1-0g-m7q"/>
+                            <constraint firstItem="qdi-O7-Boh" firstAttribute="bottom" secondItem="TnR-mg-ZAt" secondAttribute="bottom" constant="20" id="kck-BS-poO"/>
+                            <constraint firstItem="GSf-LP-UEg" firstAttribute="leading" secondItem="qdi-O7-Boh" secondAttribute="leading" constant="20" id="mXA-G1-2ix"/>
+                            <constraint firstItem="dLj-Lp-A0a" firstAttribute="centerY" secondItem="GSf-LP-UEg" secondAttribute="centerY" id="sCh-Kw-oBr"/>
+                            <constraint firstItem="TnR-mg-ZAt" firstAttribute="centerX" secondItem="bz1-aR-Dhn" secondAttribute="centerX" id="t3z-fo-C4o"/>
+                            <constraint firstItem="GSf-LP-UEg" firstAttribute="top" secondItem="I6F-L7-xUU" secondAttribute="bottom" constant="30" id="wim-4R-TXj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qdi-O7-Boh"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnNext" destination="TnR-mg-ZAt" id="D4D-ee-Sco"/>
+                        <outlet property="pickerView" destination="dLj-Lp-A0a" id="Dbq-RS-vYk"/>
+                        <outlet property="viewTop" destination="GSf-LP-UEg" id="rhf-ub-BuO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5JN-xk-JXh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="73" y="116"/>
+        </scene>
+    </scenes>
+</document>
