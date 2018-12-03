@@ -12,10 +12,10 @@ import UIKit
 class LoginViewController: BaseViewController {
     
     // Outlets
-    @IBOutlet weak var txtUsername: UITextField!
-    @IBOutlet weak var txtPassword: UITextField!
+//    @IBOutlet weak var txtUsername: UITextField!
+//    @IBOutlet weak var txtPassword: UITextField!
 
-    @IBOutlet weak var btnLogin: UIButton!
+//    @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var btnRegister: UIButton!
     
     // ViewModel
@@ -38,8 +38,8 @@ extension LoginViewController {
         
         
         //FIXME: Remove Hardcoded
-        self.txtUsername.text = "jay4"
-        self.txtPassword.text = "123456"
+//        self.txtUsername.text = "jay4"
+//        self.txtPassword.text = "123456"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -68,7 +68,7 @@ extension LoginViewController {
     @IBAction func btnTapLogin(sender: UIButton) {
         
         // Animate login button
-        self.btnLogin.startLoading()
+//        self.btnLogin.startLoading()
         self.viewModel.onTapLoginButton()
     }
     
@@ -87,7 +87,7 @@ private extension LoginViewController {
     func setup() {
         
         // Setup Login Button With Gradient Image
-        self.setGradientToButton(for: self.btnLogin, with: 12.0)
+//        self.setGradientToButton(for: self.btnLogin, with: 12.0)
         
         // Setup Register Button With Gradient Image
         self.setGradientToButton(for: self.btnRegister, with: 12.0)

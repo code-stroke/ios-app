@@ -77,6 +77,17 @@
 		1A81D85621AA6D3A00D66664 /* RadiologyInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A81D85521AA6D3A00D66664 /* RadiologyInfoView.xib */; };
 		1A81D85821AA6D4700D66664 /* ManagementInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A81D85721AA6D4700D66664 /* ManagementInfoView.xib */; };
 		1A81D85A21AA6D5000D66664 /* ManagementInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A81D85921AA6D5000D66664 /* ManagementInfoView.swift */; };
+		1A829E1B21B4358000CE9800 /* RMPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A829DFE21B4357E00CE9800 /* RMPickerViewController.m */; };
+		1A829E1C21B4358000CE9800 /* RMActionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A829E0221B4357F00CE9800 /* RMActionController.m */; };
+		1A829E1D21B4358000CE9800 /* RMGroupedAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A829E0721B4357F00CE9800 /* RMGroupedAction.m */; };
+		1A829E1E21B4358000CE9800 /* RMScrollableGroupedAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A829E0821B4357F00CE9800 /* RMScrollableGroupedAction.m */; };
+		1A829E1F21B4358000CE9800 /* RMAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A829E0C21B4357F00CE9800 /* RMAction.m */; };
+		1A829E2021B4358000CE9800 /* RMImageAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A829E0F21B4357F00CE9800 /* RMImageAction.m */; };
+		1A829E2121B4358000CE9800 /* UIView+RMActionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A829E1121B4357F00CE9800 /* UIView+RMActionController.m */; };
+		1A829E2221B4358000CE9800 /* NSProcessInfo+RMActionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A829E1321B4357F00CE9800 /* NSProcessInfo+RMActionController.m */; };
+		1A829E2321B4358000CE9800 /* RMActionControllerTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A829E1621B4357F00CE9800 /* RMActionControllerTransition.m */; };
+		1A829E2421B4358000CE9800 /* RMDateSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A829E1A21B4358000CE9800 /* RMDateSelectionViewController.m */; };
+		1A829E2721B4FD4300CE9800 /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A829E2621B4FD4300CE9800 /* FloatLabelTextField.swift */; };
 		1A94AFFE217357CA000CF4A0 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A94AFFD217357CA000CF4A0 /* RegisterViewController.swift */; };
 		1A94B00021735853000CF4A0 /* RegisterViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A94AFFF21735853000CF4A0 /* RegisterViewControllerViewModel.swift */; };
 		1A94B002217358B5000CF4A0 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A94B001217358B5000CF4A0 /* Register.storyboard */; };
@@ -206,6 +217,30 @@
 		1A81D85521AA6D3A00D66664 /* RadiologyInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RadiologyInfoView.xib; sourceTree = "<group>"; };
 		1A81D85721AA6D4700D66664 /* ManagementInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManagementInfoView.xib; sourceTree = "<group>"; };
 		1A81D85921AA6D5000D66664 /* ManagementInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementInfoView.swift; sourceTree = "<group>"; };
+		1A829DFE21B4357E00CE9800 /* RMPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMPickerViewController.m; sourceTree = "<group>"; };
+		1A829DFF21B4357E00CE9800 /* RMPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMPickerViewController.h; sourceTree = "<group>"; };
+		1A829E0121B4357F00CE9800 /* RMActionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMActionController.h; sourceTree = "<group>"; };
+		1A829E0221B4357F00CE9800 /* RMActionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMActionController.m; sourceTree = "<group>"; };
+		1A829E0421B4357F00CE9800 /* RMAction+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RMAction+Private.h"; sourceTree = "<group>"; };
+		1A829E0521B4357F00CE9800 /* RMActionController+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RMActionController+Private.h"; sourceTree = "<group>"; };
+		1A829E0721B4357F00CE9800 /* RMGroupedAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMGroupedAction.m; sourceTree = "<group>"; };
+		1A829E0821B4357F00CE9800 /* RMScrollableGroupedAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMScrollableGroupedAction.m; sourceTree = "<group>"; };
+		1A829E0921B4357F00CE9800 /* RMGroupedAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMGroupedAction.h; sourceTree = "<group>"; };
+		1A829E0A21B4357F00CE9800 /* RMScrollableGroupedAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMScrollableGroupedAction.h; sourceTree = "<group>"; };
+		1A829E0C21B4357F00CE9800 /* RMAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMAction.m; sourceTree = "<group>"; };
+		1A829E0D21B4357F00CE9800 /* RMImageAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMImageAction.h; sourceTree = "<group>"; };
+		1A829E0E21B4357F00CE9800 /* RMAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMAction.h; sourceTree = "<group>"; };
+		1A829E0F21B4357F00CE9800 /* RMImageAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMImageAction.m; sourceTree = "<group>"; };
+		1A829E1121B4357F00CE9800 /* UIView+RMActionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RMActionController.m"; sourceTree = "<group>"; };
+		1A829E1221B4357F00CE9800 /* NSProcessInfo+RMActionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSProcessInfo+RMActionController.h"; sourceTree = "<group>"; };
+		1A829E1321B4357F00CE9800 /* NSProcessInfo+RMActionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSProcessInfo+RMActionController.m"; sourceTree = "<group>"; };
+		1A829E1421B4357F00CE9800 /* UIView+RMActionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RMActionController.h"; sourceTree = "<group>"; };
+		1A829E1621B4357F00CE9800 /* RMActionControllerTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMActionControllerTransition.m; sourceTree = "<group>"; };
+		1A829E1721B4357F00CE9800 /* RMActionControllerTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMActionControllerTransition.h; sourceTree = "<group>"; };
+		1A829E1921B4358000CE9800 /* RMDateSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDateSelectionViewController.h; sourceTree = "<group>"; };
+		1A829E1A21B4358000CE9800 /* RMDateSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDateSelectionViewController.m; sourceTree = "<group>"; };
+		1A829E2521B435BA00CE9800 /* CodeStrokeAlert-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CodeStrokeAlert-Bridging-Header.h"; sourceTree = "<group>"; };
+		1A829E2621B4FD4300CE9800 /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextField.swift; sourceTree = "<group>"; };
 		1A94AFFD217357CA000CF4A0 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		1A94AFFF21735853000CF4A0 /* RegisterViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewControllerViewModel.swift; sourceTree = "<group>"; };
 		1A94B001217358B5000CF4A0 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
@@ -516,6 +551,89 @@
 			path = Providers;
 			sourceTree = "<group>";
 		};
+		1A829DFD21B4357E00CE9800 /* RMPickerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1A829DFE21B4357E00CE9800 /* RMPickerViewController.m */,
+				1A829DFF21B4357E00CE9800 /* RMPickerViewController.h */,
+			);
+			path = RMPickerViewController;
+			sourceTree = "<group>";
+		};
+		1A829E0021B4357F00CE9800 /* RMActionController */ = {
+			isa = PBXGroup;
+			children = (
+				1A829E0121B4357F00CE9800 /* RMActionController.h */,
+				1A829E0221B4357F00CE9800 /* RMActionController.m */,
+				1A829E0321B4357F00CE9800 /* Private */,
+				1A829E0621B4357F00CE9800 /* Grouping Actions */,
+				1A829E0B21B4357F00CE9800 /* Actions */,
+				1A829E1021B4357F00CE9800 /* Categories */,
+				1A829E1521B4357F00CE9800 /* Animations */,
+			);
+			path = RMActionController;
+			sourceTree = "<group>";
+		};
+		1A829E0321B4357F00CE9800 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				1A829E0421B4357F00CE9800 /* RMAction+Private.h */,
+				1A829E0521B4357F00CE9800 /* RMActionController+Private.h */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		1A829E0621B4357F00CE9800 /* Grouping Actions */ = {
+			isa = PBXGroup;
+			children = (
+				1A829E0721B4357F00CE9800 /* RMGroupedAction.m */,
+				1A829E0821B4357F00CE9800 /* RMScrollableGroupedAction.m */,
+				1A829E0921B4357F00CE9800 /* RMGroupedAction.h */,
+				1A829E0A21B4357F00CE9800 /* RMScrollableGroupedAction.h */,
+			);
+			path = "Grouping Actions";
+			sourceTree = "<group>";
+		};
+		1A829E0B21B4357F00CE9800 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				1A829E0C21B4357F00CE9800 /* RMAction.m */,
+				1A829E0D21B4357F00CE9800 /* RMImageAction.h */,
+				1A829E0E21B4357F00CE9800 /* RMAction.h */,
+				1A829E0F21B4357F00CE9800 /* RMImageAction.m */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		1A829E1021B4357F00CE9800 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				1A829E1121B4357F00CE9800 /* UIView+RMActionController.m */,
+				1A829E1221B4357F00CE9800 /* NSProcessInfo+RMActionController.h */,
+				1A829E1321B4357F00CE9800 /* NSProcessInfo+RMActionController.m */,
+				1A829E1421B4357F00CE9800 /* UIView+RMActionController.h */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		1A829E1521B4357F00CE9800 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				1A829E1621B4357F00CE9800 /* RMActionControllerTransition.m */,
+				1A829E1721B4357F00CE9800 /* RMActionControllerTransition.h */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		1A829E1821B4358000CE9800 /* RMDateSelectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1A829E1921B4358000CE9800 /* RMDateSelectionViewController.h */,
+				1A829E1A21B4358000CE9800 /* RMDateSelectionViewController.m */,
+			);
+			path = RMDateSelectionViewController;
+			sourceTree = "<group>";
+		};
 		1A94AFFC21735786000CF4A0 /* RegisterViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -571,6 +689,10 @@
 		1AAEAE66215F9B5E002E7A92 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				1A829E2621B4FD4300CE9800 /* FloatLabelTextField.swift */,
+				1A829E0021B4357F00CE9800 /* RMActionController */,
+				1A829E1821B4358000CE9800 /* RMDateSelectionViewController */,
+				1A829DFD21B4357E00CE9800 /* RMPickerViewController */,
 				1A235EA521647EB200602B00 /* Lottie Animations */,
 				1A235EA221647A5700602B00 /* RxUtils */,
 				1A235E9B216477DF00602B00 /* CustomViews */,
@@ -686,6 +808,7 @@
 		1ABCB213215F5DB1002D1987 = {
 			isa = PBXGroup;
 			children = (
+				1A829E2521B435BA00CE9800 /* CodeStrokeAlert-Bridging-Header.h */,
 				1ABCB21E215F5DB1002D1987 /* CodeStrokeAlert */,
 				1ABCB21D215F5DB1002D1987 /* Products */,
 				012C5B0A20FA399E7E0396C2 /* Pods */,
@@ -1100,7 +1223,9 @@
 				1A2266EC2168B1A600EA5E8D /* HospitalViewController.swift in Sources */,
 				1A2F9CCC21A12EBF00231C9E /* EDInfo.swift in Sources */,
 				1A7E58132160A17100777BDD /* NetworkModule.swift in Sources */,
+				1A829E2421B4358000CE9800 /* RMDateSelectionViewController.m in Sources */,
 				1A81D85221AA6D2300D66664 /* ClinicalAssessmentInfoView.swift in Sources */,
+				1A829E1B21B4358000CE9800 /* RMPickerViewController.m in Sources */,
 				1A0503722169E87500E7BB94 /* RaceViewController.swift in Sources */,
 				1AE4FC7B216C6A9A00A9F4B0 /* PatientListViewController.swift in Sources */,
 				1A0503692169DBEF00E7BB94 /* VitalsViewController.swift in Sources */,
@@ -1112,9 +1237,12 @@
 				1A235E9F216477DF00602B00 /* RoundedButton.swift in Sources */,
 				1A9736222161DFC200FE8A14 /* ApiResponseLogin.swift in Sources */,
 				1A94B00021735853000CF4A0 /* RegisterViewControllerViewModel.swift in Sources */,
+				1A829E1E21B4358000CE9800 /* RMScrollableGroupedAction.m in Sources */,
 				1A0C94FD21A1BA3D00D97B4B /* ClinicalAssessmentInfo.swift in Sources */,
 				1A94B00921735A27000CF4A0 /* PasswordViewControllerViewModel.swift in Sources */,
+				1A829E1F21B4358000CE9800 /* RMAction.m in Sources */,
 				1AD67ED42169380800A89C8A /* PastMedicalHistoryViewController.swift in Sources */,
+				1A829E2721B4FD4300CE9800 /* FloatLabelTextField.swift in Sources */,
 				1AD04882216A7B9900EDECBF /* SummaryTableView.swift in Sources */,
 				1AAEAE89215FB6AE002E7A92 /* DropDownCell.swift in Sources */,
 				1A68ED0C2196FE1200E3E0CC /* ApiResponsePair.swift in Sources */,
@@ -1141,18 +1269,24 @@
 				1AC4750C2165D89E00C29696 /* ParamedicNavigationController.swift in Sources */,
 				1A235EB121648A7300602B00 /* UserManager.swift in Sources */,
 				1AE4FC82216C70BD00A9F4B0 /* KGNAutoLayout.swift in Sources */,
+				1A829E2221B4358000CE9800 /* NSProcessInfo+RMActionController.m in Sources */,
 				1A05037B2169EB5200E7BB94 /* CannulaViewControllerImplementation.swift in Sources */,
 				1ABCB220215F5DB1002D1987 /* AppDelegate.swift in Sources */,
 				1A05036B2169DC0700E7BB94 /* VitalsViewControllerViewModel.swift in Sources */,
+				1A829E2121B4358000CE9800 /* UIView+RMActionController.m in Sources */,
 				1AC9F327215F653800B188D4 /* MainViewController.swift in Sources */,
 				1AEDF21F21A18C02001B7EB2 /* ClinicalInfo.swift in Sources */,
 				1AAEAE74215FA3FC002E7A92 /* ResponseExtractor.swift in Sources */,
 				1A555FF8215FE88C00C637C6 /* PrefsManager.swift in Sources */,
 				1AAEAE84215FB6AE002E7A92 /* DPDUIView+Extension.swift in Sources */,
+				1A829E1C21B4358000CE9800 /* RMActionController.m in Sources */,
 				1AAEAE82215FB6AE002E7A92 /* DPDConstants.swift in Sources */,
+				1A829E2021B4358000CE9800 /* RMImageAction.m in Sources */,
 				1A0503742169E88200E7BB94 /* RaceViewControllerViewModel.swift in Sources */,
 				1A51669721A002B600FF8CCE /* UserInfo.swift in Sources */,
 				1AC9F32F215F78DF00B188D4 /* Utils.swift in Sources */,
+				1A829E1D21B4358000CE9800 /* RMGroupedAction.m in Sources */,
+				1A829E2321B4358000CE9800 /* RMActionControllerTransition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1310,6 +1444,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.codestroke.codestrokealert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Code Stroke Dev";
+				SWIFT_OBJC_BRIDGING_HEADER = "CodeStrokeAlert-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1331,6 +1466,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.codestroke.codestrokealert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Code Stroke Dev";
+				SWIFT_OBJC_BRIDGING_HEADER = "CodeStrokeAlert-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

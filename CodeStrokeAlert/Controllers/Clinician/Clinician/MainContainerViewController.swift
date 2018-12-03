@@ -9,6 +9,7 @@
 import UIKit
 
 let dashBoardStoryboard = UIStoryboard(name: "Clinician", bundle: nil)
+let appDelegate         = UIApplication.shared.delegate as! AppDelegate
 
 // MARK:- Outlets and Initilization -
 class MainContainerViewController: BaseViewController {
@@ -151,6 +152,13 @@ private extension MainContainerViewController {
 }
 
 extension MainContainerViewController: EDInfoViewDelegate, PatientInfoViewDelegate, ClinicalInfoViewDelegate, ClinicalAssessmentInfoViewDelegate, RadiologyInfoViewDelegate, ManagementInfoViewDelegate {
+    
+    func showDatePicker(actionController: RMDateSelectionViewController) {
+        
+        self.present(actionController, animated: true, completion: {
+            self.view.endEditing(true)
+        })
+    }
     
     func showAlert(withTitle title: String, andMessage message: String, isSuccess: Bool) {
         

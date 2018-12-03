@@ -12,6 +12,7 @@ import UIKit
 protocol PatientInfoViewDelegate {
     
     func showAlert(withTitle title: String, andMessage message: String, isSuccess: Bool)
+    func showDatePicker(actionController: RMDateSelectionViewController)
 }
 
 class PatientInfoView: UIView {
@@ -33,6 +34,9 @@ class PatientInfoView: UIView {
     
     @IBOutlet weak var btnSubmit: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    var strDOB: String = ""
+    var strLastSeen: String = ""
     
     // Delegate
     var delegate: PatientInfoViewDelegate? = nil
@@ -66,6 +70,10 @@ class PatientInfoView: UIView {
         self.addSubview(self.container)
         self.clipsToBounds = true
         
+        // Delegate
+        self.txtLastWell.delegate = self
+        self.txtDob.delegate = self
+        
         // Setup Submit Button With Gradient Image
         self.setGradientToButton(for: self.btnSubmit, with: 12.0)
         
@@ -84,7 +92,20 @@ extension PatientInfoView {
             print(apiResponsePatientInfo)
             
             self.txtAddress.text = apiResponsePatientInfo.caseArray[0].address
-            self.txtDob.text = apiResponsePatientInfo.caseArray[0].dob
+            
+            if let date = apiResponsePatientInfo.caseArray[0].dob?.toDate("yyyy-MM-dd") {
+                self.strDOB = date.toString("yyyy-MM-dd") ?? ""
+                let f = DateFormatter()
+                f.dateFormat = "MMM dd, yyyy"
+                let formattedDate: String = f.string(from: date)
+                self.txtDob.text = formattedDate
+            }
+            
+            if let strLastWell = apiResponsePatientInfo.caseArray[0].last_well {
+                
+                self.strLastSeen = strLastWell
+            }
+
             self.txtNextKin.text = apiResponsePatientInfo.caseArray[0].nok
             self.txtSurname.text = apiResponsePatientInfo.caseArray[0].last_name
             self.txtLastWell.text = apiResponsePatientInfo.caseArray[0].last_well
@@ -124,7 +145,7 @@ extension PatientInfoView {
         
         self.activityIndicator.startAnimating()
         
-        NetworkModule.shared.setPatientInfo(first_name: self.txtFirstName.text!, last_name: self.txtSurname.text!, dob: "", address: self.txtAddress.text!, gender: self.btnUnspecified.isSelected ? "u" : (self.btnMale.isSelected ? "m" : "f"), last_well: "", nok: self.txtNextKin.text!, nok_phone: self.txtNOKContact.text!, medicare_no: self.txtMedicare.text!, hospital_id: "1", onSuccess: { apiResponsePatientInfo in
+        NetworkModule.shared.setPatientInfo(first_name: self.txtFirstName.text!, last_name: self.txtSurname.text!, dob: self.strDOB, address: self.txtAddress.text!, gender: self.btnUnspecified.isSelected ? "u" : (self.btnMale.isSelected ? "m" : "f"), last_well: self.strLastSeen, nok: self.txtNextKin.text!, nok_phone: self.txtNOKContact.text!, medicare_no: self.txtMedicare.text!, hospital_id: "1", onSuccess: { apiResponsePatientInfo in
             
             print(apiResponsePatientInfo)
             
@@ -165,5 +186,78 @@ private extension PatientInfoView {
         
         buttons.forEach { $0.isSelected = false }
         selectedButton.isSelected = true
+    }
+    
+    func openDatePicker() {
+        
+        self.endEditing(true)
+        let style = RMActionControllerStyle.white
+        
+        let cancelAction = RMAction<UIDatePicker>(title: "Cancel", style: RMActionStyle.cancel) { _ in
+            
+            print("Date selection was canceled")
+        }
+        
+        let selectAction = RMAction<UIDatePicker>(title: "Select", style: RMActionStyle.done) { controller in
+            
+            if let pickerController = controller as? RMDateSelectionViewController {
+                
+                let f = DateFormatter()
+                
+                if self.txtLastWell.isSelected == true {
+                    
+                    f.dateFormat = "yyyy-MM-dd hh:mm"
+                    let formattedDate: String = f.string(from: pickerController.datePicker.date)
+                    self.txtLastWell.text = formattedDate
+                    
+                    f.setLocal()
+                    f.dateFormat = "yyyy-MM-dd hh:mm:ss"
+                    self.strLastSeen = f.string(from: pickerController.datePicker.date)
+                    
+                } else {
+                    f.dateFormat = "MMM dd, yyyy"
+                    let formattedDate: String = f.string(from: pickerController.datePicker.date)
+                    self.txtDob.text = formattedDate
+                    
+                    f.setLocal()
+                    f.dateFormat = "yyyy-MM-dd"
+                    self.strDOB = f.string(from: pickerController.datePicker.date)
+                }
+            }
+        }
+        
+        let actionController = RMDateSelectionViewController(style: style, title: "Please select date", message: nil, select: selectAction, andCancel: cancelAction)!
+        
+        if self.txtLastWell.isSelected == true {
+            actionController.datePicker.datePickerMode = .dateAndTime
+        } else {
+            actionController.datePicker.set18YearValidation()
+            actionController.datePicker.datePickerMode = .date
+        }
+        
+        self.delegate?.showDatePicker(actionController: actionController)
+    }
+}
+
+// MARK:- TextField Delegate -
+extension PatientInfoView: UITextFieldDelegate {
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        
+        if textField == txtDob {
+            
+            self.txtLastWell.isSelected = false
+            self.txtDob.isSelected = true
+            self.openDatePicker()
+            return false
+            
+        } else if textField == txtLastWell {
+            
+            self.txtLastWell.isSelected = true
+            self.txtDob.isSelected = false
+            self.openDatePicker()
+            return false
+        }
+        return true
     }
 }

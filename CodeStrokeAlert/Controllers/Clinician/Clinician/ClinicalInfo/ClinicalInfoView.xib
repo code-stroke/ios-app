@@ -38,38 +38,62 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7u8-ZM-CxW">
-                    <rect key="frame" x="10" y="10" width="355" height="338"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="7u8-ZM-CxW">
+                    <rect key="frame" x="10" y="10" width="355" height="358"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Past Medical History" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rJd-0H-vtI">
-                            <rect key="frame" x="0.0" y="0.0" width="355" height="40"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="40" id="fFV-L4-i1z"/>
-                            </constraints>
-                            <nil key="textColor"/>
-                            <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
-                            <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
-                        </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Medications" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SFy-AD-yZ4">
-                            <rect key="frame" x="0.0" y="48" width="355" height="40"/>
-                            <nil key="textColor"/>
-                            <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
-                            <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
-                        </textField>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="p5N-Se-WOj">
+                            <rect key="frame" x="0.0" y="0.0" width="355" height="41"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Past Medical History" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rJd-0H-vtI" customClass="FloatLabelTextField" customModule="CodeStrokeAlert" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="fFV-L4-i1z"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                </textField>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0e0-ft-aML">
+                                    <rect key="frame" x="0.0" y="40" width="355" height="1"/>
+                                    <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.82745098039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="ycK-HX-cdk"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ymz-2p-d9m">
+                            <rect key="frame" x="0.0" y="53" width="355" height="41"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Medications" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SFy-AD-yZ4" customClass="FloatLabelTextField" customModule="CodeStrokeAlert" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="40"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                </textField>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ouq-Vn-sxT">
+                                    <rect key="frame" x="0.0" y="40" width="355" height="1"/>
+                                    <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.82745098039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="nM8-ZN-0Ia"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="41S-wW-Dpr">
-                            <rect key="frame" x="0.0" y="96" width="355" height="50"/>
+                            <rect key="frame" x="0.0" y="106" width="355" height="40"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anticoagulants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIN-ki-R2h">
-                                    <rect key="frame" x="0.0" y="5" width="120.5" height="37"/>
+                                    <rect key="frame" x="0.0" y="5" width="120.5" height="27"/>
                                     <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="18"/>
                                     <color key="textColor" red="0.3294117647" green="0.43529411759999997" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vIp-3C-399">
-                                    <rect key="frame" x="130.5" y="5" width="150" height="37"/>
+                                    <rect key="frame" x="130.5" y="5" width="150" height="27"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfc-0C-Alp">
-                                            <rect key="frame" x="0.0" y="0.0" width="71" height="37"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="71" height="27"/>
                                             <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
                                             <state key="normal" title="  Yes" image="ic_ovel_deselect">
                                                 <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -82,7 +106,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoB-gI-eQh">
-                                            <rect key="frame" x="79" y="0.0" width="71" height="37"/>
+                                            <rect key="frame" x="79" y="0.0" width="71" height="27"/>
                                             <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
                                             <state key="normal" title="  No" image="ic_ovel_deselect">
                                                 <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -104,61 +128,102 @@
                             <constraints>
                                 <constraint firstItem="vIp-3C-399" firstAttribute="top" secondItem="hIN-ki-R2h" secondAttribute="top" id="12A-2X-b5f"/>
                                 <constraint firstItem="vIp-3C-399" firstAttribute="leading" secondItem="hIN-ki-R2h" secondAttribute="trailing" constant="10" id="6SP-Ge-xeO"/>
-                                <constraint firstAttribute="height" constant="50" id="Apc-gf-6RX"/>
+                                <constraint firstAttribute="height" constant="40" id="Apc-gf-6RX"/>
                                 <constraint firstItem="hIN-ki-R2h" firstAttribute="top" secondItem="41S-wW-Dpr" secondAttribute="top" constant="5" id="Ouo-Id-p4U"/>
                                 <constraint firstAttribute="bottom" secondItem="hIN-ki-R2h" secondAttribute="bottom" constant="8" id="UFO-RM-eyp"/>
                                 <constraint firstItem="hIN-ki-R2h" firstAttribute="leading" secondItem="41S-wW-Dpr" secondAttribute="leading" id="qZx-yL-te6"/>
                                 <constraint firstItem="vIp-3C-399" firstAttribute="bottom" secondItem="hIN-ki-R2h" secondAttribute="bottom" id="yGu-ai-vuu"/>
                             </constraints>
                         </view>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Dose" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ux9-fh-mOc" customClass="DesignableTextField" customModule="CodeStrokeAlert" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="154" width="355" height="40"/>
-                            <nil key="textColor"/>
-                            <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
-                            <textInputTraits key="textInputTraits"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="ic_calendar"/>
-                                <userDefinedRuntimeAttribute type="number" keyPath="rightviewWidth">
-                                    <real key="value" value="25"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
-                                    <real key="value" value="8"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Situation (HOPC)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YdG-fS-J4G">
-                            <rect key="frame" x="0.0" y="202" width="355" height="40"/>
-                            <nil key="textColor"/>
-                            <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
-                            <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
-                        </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight (Kg)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yZt-8Z-sfb">
-                            <rect key="frame" x="0.0" y="250" width="355" height="40"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="40" id="ID0-1V-bmb"/>
-                            </constraints>
-                            <nil key="textColor"/>
-                            <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
-                            <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
-                        </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Meal" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NRj-Z9-Xxw">
-                            <rect key="frame" x="0.0" y="298" width="355" height="40"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="40" id="oH6-nS-lGM"/>
-                            </constraints>
-                            <nil key="textColor"/>
-                            <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
-                            <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
-                        </textField>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OBh-jp-uJ3">
+                            <rect key="frame" x="0.0" y="158" width="355" height="41"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Dose" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ux9-fh-mOc" customClass="FloatLabelTextField" customModule="CodeStrokeAlert" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="40"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="ic_calendar"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightviewWidth">
+                                            <real key="value" value="25"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gZt-5A-uYb">
+                                    <rect key="frame" x="0.0" y="40" width="355" height="1"/>
+                                    <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.82745098039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="qnN-u2-5Dy"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="U2P-fx-hEQ">
+                            <rect key="frame" x="0.0" y="211" width="355" height="41"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Situation (HOPC)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YdG-fS-J4G" customClass="FloatLabelTextField" customModule="CodeStrokeAlert" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="40"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                </textField>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fk0-Tq-3EO">
+                                    <rect key="frame" x="0.0" y="40" width="355" height="1"/>
+                                    <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.82745098039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="eai-Zf-3rm"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bmt-Mf-j72">
+                            <rect key="frame" x="0.0" y="264" width="355" height="41"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Weight (Kg)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yZt-8Z-sfb" customClass="FloatLabelTextField" customModule="CodeStrokeAlert" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="40"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                </textField>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lJd-Vt-seV">
+                                    <rect key="frame" x="0.0" y="40" width="355" height="1"/>
+                                    <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.82745098039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="BWn-eE-UEV"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zW4-Eo-0En">
+                            <rect key="frame" x="0.0" y="317" width="355" height="41"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Meal" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NRj-Z9-Xxw" customClass="FloatLabelTextField" customModule="CodeStrokeAlert" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="40"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                </textField>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aMp-pa-41M">
+                                    <rect key="frame" x="0.0" y="40" width="355" height="1"/>
+                                    <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.82745098039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="v6g-iZ-De7"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="Ux9-fh-mOc" firstAttribute="height" secondItem="rJd-0H-vtI" secondAttribute="height" id="H6Y-6A-56H"/>
-                        <constraint firstItem="SFy-AD-yZ4" firstAttribute="height" secondItem="rJd-0H-vtI" secondAttribute="height" id="Oih-Tt-HuW"/>
-                        <constraint firstItem="YdG-fS-J4G" firstAttribute="height" secondItem="rJd-0H-vtI" secondAttribute="height" id="eUR-xn-FCm"/>
+                        <constraint firstItem="Ux9-fh-mOc" firstAttribute="height" secondItem="rJd-0H-vtI" secondAttribute="height" id="EpA-AQ-iH8"/>
+                        <constraint firstItem="YdG-fS-J4G" firstAttribute="height" secondItem="rJd-0H-vtI" secondAttribute="height" id="Hq1-L5-4Sw"/>
+                        <constraint firstItem="NRj-Z9-Xxw" firstAttribute="height" secondItem="rJd-0H-vtI" secondAttribute="height" id="WgM-17-7TE"/>
+                        <constraint firstItem="yZt-8Z-sfb" firstAttribute="height" secondItem="rJd-0H-vtI" secondAttribute="height" id="mQx-pF-F8E"/>
+                        <constraint firstItem="SFy-AD-yZ4" firstAttribute="height" secondItem="rJd-0H-vtI" secondAttribute="height" id="uXw-Hc-hSP"/>
                     </constraints>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUt-NT-GD9">
-                    <rect key="frame" x="87.5" y="368" width="200" height="45"/>
+                    <rect key="frame" x="87.5" y="388" width="200" height="45"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="cxB-ie-DAg"/>
                         <constraint firstAttribute="height" constant="45" id="rcX-HC-nfP"/>

@@ -38,7 +38,7 @@ class LoginViewControllerViewModelImplementation: LoginViewControllerViewModel {
     
     // Login
     func onTapLoginButton() {
-        
+        /*
         var message = ""
         
         guard let username = self.view.txtUsername.text,
@@ -111,7 +111,7 @@ class LoginViewControllerViewModelImplementation: LoginViewControllerViewModel {
             
             // Enable login button
             self.view.btnLogin.stopLoading()
-        })
+        }) */
     }
     
     // Login

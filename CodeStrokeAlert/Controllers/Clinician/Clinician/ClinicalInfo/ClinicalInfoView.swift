@@ -11,6 +11,7 @@ import UIKit
 protocol ClinicalInfoViewDelegate {
     
     func showAlert(withTitle title: String, andMessage message: String, isSuccess: Bool)
+    func showDatePicker(actionController: RMDateSelectionViewController)
 }
 
 class ClinicalInfoView: UIView {
@@ -29,6 +30,9 @@ class ClinicalInfoView: UIView {
     
     @IBOutlet weak var btnSubmit: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    var strLastDoseDate: String = ""
+    var strLastMealDate: String = ""
     
     // Delegate
     var delegate: ClinicalInfoViewDelegate? = nil
@@ -65,6 +69,10 @@ class ClinicalInfoView: UIView {
         // Setup Submit Button With Gradient Image
         self.setGradientToButton(for: self.btnSubmit, with: 12.0)
         
+        // Delegate
+        self.txtLastDose.delegate = self
+        self.txtLastMeal.delegate = self
+        
         // Get ED Data
         self.getClinicalInfo()
     }
@@ -85,6 +93,16 @@ extension ClinicalInfoView {
             self.txtSituation.text = apiResponseClinicalInfo.clinicalInfoArray[0].hopc ?? ""
             self.txtMedication.text = apiResponseClinicalInfo.clinicalInfoArray[0].meds ?? ""
             self.txtPastMedicalHistory.text = apiResponseClinicalInfo.clinicalInfoArray[0].pmhx ?? ""
+            
+            if let strLastDose = apiResponseClinicalInfo.clinicalInfoArray[0].anticoags_last_dose {
+                
+                self.strLastDoseDate = strLastDose
+            }
+            
+            if let strLastMeal = apiResponseClinicalInfo.clinicalInfoArray[0].last_meal {
+                
+                self.strLastMealDate = strLastMeal
+            }
             
             self.btnAnticoagulantsYes.isSelected = false
             self.btnAnticoagulantsNo.isSelected = true
@@ -130,7 +148,7 @@ extension ClinicalInfoView {
         
         self.activityIndicator.startAnimating()
         
-        NetworkModule.shared.setClinicalInfo(pmhx: self.txtPastMedicalHistory.text!, anticoags_last_dose: "", meds: self.txtMedication.text!, anticoags: self.btnAnticoagulantsYes.isSelected ? true : false, hopc: self.txtSituation.text!, weight: Float(strWeight)!, last_meal: self.txtLastMeal.text!, onSuccess: { apiResponseClinicalInfo in
+        NetworkModule.shared.setClinicalInfo(pmhx: self.txtPastMedicalHistory.text!, anticoags_last_dose: self.strLastDoseDate, meds: self.txtMedication.text!, anticoags: self.btnAnticoagulantsYes.isSelected ? true : false, hopc: self.txtSituation.text!, weight: Float(strWeight)!, last_meal: self.strLastMealDate, onSuccess: { apiResponseClinicalInfo in
     
             print(apiResponseClinicalInfo)
             
@@ -176,5 +194,74 @@ private extension ClinicalInfoView {
         
         buttons.forEach { $0.isSelected = false }
         selectedButton.isSelected = true
+    }
+    
+    func openDatePicker() {
+        
+        self.endEditing(true)
+        let style = RMActionControllerStyle.white
+        
+        let cancelAction = RMAction<UIDatePicker>(title: "Cancel", style: RMActionStyle.cancel) { _ in
+            
+            print("Date selection was canceled")
+        }
+        
+        let selectAction = RMAction<UIDatePicker>(title: "Select", style: RMActionStyle.done) { controller in
+            
+            if let pickerController = controller as? RMDateSelectionViewController {
+                
+                let f = DateFormatter()
+                
+                if self.txtLastMeal.isSelected == true {
+                    
+                    f.dateFormat = "yyyy-MM-dd hh:mm"
+                    let formattedDate: String = f.string(from: pickerController.datePicker.date)
+                    self.txtLastMeal.text = formattedDate
+                    
+                    f.setLocal()
+                    f.dateFormat = "yyyy-MM-dd hh:mm:ss"
+                    self.strLastMealDate = f.string(from: pickerController.datePicker.date)
+                    
+                } else {
+                    
+                    f.dateFormat = "yyyy-MM-dd hh:mm"
+                    let formattedDate: String = f.string(from: pickerController.datePicker.date)
+                    self.txtLastDose.text = formattedDate
+                    
+                    f.setLocal()
+                    f.dateFormat = "yyyy-MM-dd hh:mm:ss"
+                    self.strLastDoseDate = f.string(from: pickerController.datePicker.date)
+                }
+            }
+        }
+        
+        let actionController = RMDateSelectionViewController(style: style, title: "Please select date", message: nil, select: selectAction, andCancel: cancelAction)!
+        
+        actionController.datePicker.datePickerMode = .dateAndTime
+        
+        self.delegate?.showDatePicker(actionController: actionController)
+    }
+}
+
+// MARK:- TextField Delegate -
+extension ClinicalInfoView: UITextFieldDelegate {
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        
+        if textField == txtLastMeal {
+            
+            self.txtLastDose.isSelected = false
+            self.txtLastMeal.isSelected = true
+            self.openDatePicker()
+            return false
+            
+        } else if textField == txtLastDose {
+            
+            self.txtLastDose.isSelected = true
+            self.txtLastMeal.isSelected = false
+            self.openDatePicker()
+            return false
+        }
+        return true
     }
 }
