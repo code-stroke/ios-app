@@ -12,7 +12,7 @@ import RxSwift
 // MARK:- Model for required methods -
 protocol PatientListViewControllerViewModel {
     
-    func filter(byCaseType caseType: String)
+    
 }
 
 // MARK:- Extension of Model for optional methods -
@@ -24,7 +24,5 @@ extension PatientListViewControllerViewModel {
 // MARK:- ModelImplementation -
 class PatientListViewControllerViewModelImplementation: PatientListViewControllerViewModel {
     
-    func filter(byCaseType caseType: String) {
-        
-    }
+    
 }

@@ -14,9 +14,6 @@ protocol LoginViewControllerViewModel {
     
     // Login
     func onTapLoginButton()
-    
-    // Login With QR
-    func onTapLoginWithQRButton()
 }
 
 // MARK:- Extension of Model for optional methods -
@@ -38,7 +35,7 @@ class LoginViewControllerViewModelImplementation: LoginViewControllerViewModel {
     
     // Login
     func onTapLoginButton() {
-        /*
+        
         var message = ""
         
         guard let username = self.view.txtUsername.text,
@@ -60,28 +57,8 @@ class LoginViewControllerViewModelImplementation: LoginViewControllerViewModel {
             return
         }
         
-        guard PrefsManager.getSavedData(for: TOKENINFO) != nil else {
-            
-            // Create controller
-            let alertController = PGAlertViewController(title: "CodeStrokeAlert", message: "Please login with QR Code", style: .error, dismissable: true, actions: [PGAlertAction(title: "OK", handler: nil)])
-            
-            // Show alert controller
-            self.view.present(alertController, animated: true, completion: nil)
-            return
-        }
-        
-        let enteredCreds = EnteredCreds()
-        enteredCreds.username = username
-        enteredCreds.password = password
-        PrefsManager.saveData(for: ENTEREDCREDS, and: enteredCreds)
-        
-        NetworkModule.shared.login(onSuccess: { apiResponseLogin in
-            print(apiResponseLogin)
-            
-            // Handle apiResponseLogin
-            //
-            // Save User
-            UserManager.add(user: apiResponseLogin.userInfo)
+        NetworkModule.shared.login(username: username, password: password, onSuccess: { ApiResponseLogin in
+            print(ApiResponseLogin)
             
             // Create Alert Controller
             let alertController = PGAlertViewController(title: "CodeStrokeAlert", message: "Login successfull", style: .success, dismissable: false, actions: [PGAlertAction(title: "OK", style: .normal, handler: {
@@ -111,14 +88,6 @@ class LoginViewControllerViewModelImplementation: LoginViewControllerViewModel {
             
             // Enable login button
             self.view.btnLogin.stopLoading()
-        }) */
-    }
-    
-    // Login
-    func onTapLoginWithQRButton() {
-        
-        self.view.navigationController?.navigationBar.isHidden = false
-        let registerVC: RegisterViewController = UIStoryboard.storyboard(.register).instantiate()
-        self.view.navigate(to: registerVC)
+        })
     }
 }

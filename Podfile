@@ -26,7 +26,5 @@ target 'CodeStrokeAlert' do
     pod 'AKMediaViewer'
     pod 'lottie-ios'
     pod 'Buglife'
-    pod 'SwiftOTP'
-    pod 'DropDown'
     
 end

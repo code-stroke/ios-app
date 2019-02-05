@@ -12,10 +12,10 @@ import UIKit
 class LoginViewController: BaseViewController {
     
     // Outlets
-//    @IBOutlet weak var txtUsername: UITextField!
-//    @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var txtUsername: UITextField!
+    @IBOutlet weak var txtPassword: UITextField!
 
-//    @IBOutlet weak var btnLogin: UIButton!
+    @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var btnRegister: UIButton!
     
     // ViewModel
@@ -35,11 +35,6 @@ extension LoginViewController {
         
         // Setup Views
         self.setup()
-        
-        
-        //FIXME: Remove Hardcoded
-//        self.txtUsername.text = "jay4"
-//        self.txtPassword.text = "123456"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,17 +42,6 @@ extension LoginViewController {
         
         // Set Navigation Hidden
         self.navigationController?.navigationBar.isHidden = true
-        self.btnRegister.stopLoading()
-        let tokenInfo = PrefsManager.getSavedData(for: TOKENINFO)
-        
-        let isFrom = UserDefaults.standard.bool(forKey: "PASSWORD")
-        
-        if tokenInfo != nil && isFrom {
-            self.navigationController?.navigationBar.isHidden = false
-            let passwordVC: PasswordViewController = UIStoryboard.storyboard(.password).instantiate()
-            self.navigate(to: passwordVC)
-            UserDefaults.standard.set(false, forKey: "PASSWORD")
-        }
     }
 }
 
@@ -68,15 +52,18 @@ extension LoginViewController {
     @IBAction func btnTapLogin(sender: UIButton) {
         
         // Animate login button
-//        self.btnLogin.startLoading()
+        self.btnLogin.startLoading()
         self.viewModel.onTapLoginButton()
     }
     
     // Register
     @IBAction func btnTapRegister(sender: UIButton) {
         
-        self.btnRegister.startLoading()
-        self.viewModel.onTapLoginWithQRButton()
+        // Set Navigation Hidden
+        self.navigationController?.navigationBar.isHidden = false
+        
+        let register: RegisterViewController = UIStoryboard.storyboard(.register).instantiate()
+        self.navigate(to: register)
     }
 }
 
@@ -87,10 +74,18 @@ private extension LoginViewController {
     func setup() {
         
         // Setup Login Button With Gradient Image
-//        self.setGradientToButton(for: self.btnLogin, with: 12.0)
+        self.setGradientToButton(for: self.btnLogin, with: 12.0)
         
         // Setup Register Button With Gradient Image
         self.setGradientToButton(for: self.btnRegister, with: 12.0)
+    }
+    
+    // Set Gradient
+    func setGradientToButton(for button: UIButton, with cornerRadius: CGFloat) {
+        
+        let image = self.gradientWithFrametoImage(frame: button.frame, colors: [UIColor(red: 255/255, green: 105/255, blue: 97/255, alpha: 1).cgColor, UIColor(red: 255/255, green: 141/255, blue: 41/255, alpha: 1).cgColor])!
+        button.layer.cornerRadius = cornerRadius
+        button.backgroundColor = UIColor(patternImage: image)
     }
 }
 

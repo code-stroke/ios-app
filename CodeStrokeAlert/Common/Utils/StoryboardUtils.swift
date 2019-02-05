@@ -27,7 +27,6 @@ extension UIStoryboard {
         case cannula
         case summary
         case patientlist
-        case clinician
         
         // Real filename
         var filename: String { return rawValue.capitalized }

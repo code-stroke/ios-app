@@ -4,8 +4,6 @@ PODS:
   - Alamofire (4.7.2)
   - ASBPlayerScrubbing (0.1)
   - Buglife (2.8.0)
-  - CryptoSwift (0.12.0)
-  - DropDown (2.3.10)
   - EVReflection/Alamofire (5.6.2):
     - Alamofire
     - EVReflection/Core
@@ -101,15 +99,12 @@ PODS:
     - SDWebImage/Core (= 4.4.1)
   - SDWebImage/Core (4.4.1)
   - SVProgressHUD (2.2.5)
-  - SwiftOTP (0.1.4):
-    - CryptoSwift (>= 0.10.0)
   - Toaster (2.1.1)
 
 DEPENDENCIES:
   - AKMediaViewer
   - ASBPlayerScrubbing
   - Buglife
-  - DropDown
   - EVReflection/Alamofire
   - Firebase/Auth
   - Firebase/Core
@@ -126,7 +121,6 @@ DEPENDENCIES:
   - RxOptional
   - SDWebImage (~> 4.1)
   - SVProgressHUD
-  - SwiftOTP
   - Toaster (~> 2.0)
 
 SPEC REPOS:
@@ -135,8 +129,6 @@ SPEC REPOS:
     - Alamofire
     - ASBPlayerScrubbing
     - Buglife
-    - CryptoSwift
-    - DropDown
     - EVReflection
     - Firebase
     - FirebaseABTesting
@@ -165,7 +157,6 @@ SPEC REPOS:
     - RxSwift
     - SDWebImage
     - SVProgressHUD
-    - SwiftOTP
     - Toaster
 
 SPEC CHECKSUMS:
@@ -173,8 +164,6 @@ SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   ASBPlayerScrubbing: 0fc5e76aad6fdbcf14380734fb7f2c127cd28b66
   Buglife: fed8594db4b440bc85d44629b90f2575713e8825
-  CryptoSwift: 1c07ca50843dd48bc54e6ea53d7a4dba3b645716
-  DropDown: 6c3e2c28d08b46be5577796fbeb4e1dda3ad471c
   EVReflection: 640322f8a3aaf78cbc3c23892476b6adb636ebf0
   Firebase: d66f4f29c23f22d96808d9abc174d81d8eee968f
   FirebaseABTesting: 1f50b8d50f5e3469eea54e7463a7b7fe221d1f5e
@@ -203,9 +192,8 @@ SPEC CHECKSUMS:
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
   SDWebImage: 47e9b5b925cbce75946c23f0c42dd19464189af4
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
-  SwiftOTP: aa5392fdfb1838c1ae6ff617392d724355bb6ff7
   Toaster: a6c9532de1ded8105e77376f7dffeb2e12b46dbb
 
-PODFILE CHECKSUM: 28faa7e9f749c969634fa30d20a614e36f5dc565
+PODFILE CHECKSUM: d80113491898d6c7b8ea492bf4b6828bde00eab9
 
 COCOAPODS: 1.5.3

@@ -8,19 +8,9 @@
 
 import UIKit
 
-class PatientListCell: UITableViewCell {
-    
-    @IBOutlet weak var lblName: UILabel!
-    @IBOutlet weak var lblGender: UILabel!
-    @IBOutlet weak var lblAge: UILabel!
-    @IBOutlet weak var lblETA: UILabel!
-}
-
 // MARK:- Outlets and Properties -
 class PatientListViewController: BaseViewController {
     
-    @IBOutlet weak var lblEmptyData: UILabel!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tblPatientList: UITableView!
     @IBOutlet weak var btnIncoming: UIButton!
     @IBOutlet weak var btnActive: UIButton!
@@ -31,14 +21,6 @@ class PatientListViewController: BaseViewController {
     fileprivate var searchBar:                  UITextField!
     fileprivate var isInSearchMode:             Bool            = false
     fileprivate let animation_duration:         TimeInterval    = 0.35
-    
-    fileprivate var caseList: [Case] = []
-    
-    fileprivate var filteredCaseList: [Case] = [] {
-        didSet {
-            self.tblPatientList.reloadData()
-        }
-    }
 }
 
 // MARK:- ViewController LifeCycle -
@@ -51,36 +33,6 @@ extension PatientListViewController {
         
         // Initialize
         self.initialise(withNavBarStyle: .standard, leftNavBarButtonType: .none, rightNavBarButtonType: .search, customImage: #imageLiteral(resourceName: "ic_logo.png"))
-        
-        self.activityIndicator.startAnimating()
-        
-        NetworkModule.shared.caseList(onSuccess: { apiResponseCaseList in
-            
-            print(apiResponseCaseList)
-            self.caseList = apiResponseCaseList.caseArray
-            self.filteredCaseList = self.filter(byCaseType: "incoming")
-            CasesManager.add(cases: self.caseList)
-            
-        }, onFailure: { failureReason in
-            
-            // Switch failure reason
-            if failureReason == .wrongCredentials {
-                print(failureReason)
-            }
-            
-        }, onAction: { responseAction in
-            
-            // Show alert for response action
-            if responseAction == .actionUpdate {
-                
-            }
-            
-        }, onError: { error in
-            // Show alert for error
-        }, onComplete: { success in
-            
-            self.activityIndicator.stopAnimating()
-        })
     }
 }
 
@@ -89,19 +41,17 @@ fileprivate extension PatientListViewController {
     
     @IBAction func btnCaseTypeClicked(_ sender: UIButton) {
         
+        self.setBarButtonVisibility(isVisible: false)
         self.clearAllAndSelected(buttons: [self.btnActive, self.btnIncoming, self.btnCompleted], selectedButton: sender)
 
         var x: CGFloat = 0
         
         if sender.tag == 1 {
             x = 0
-            self.filteredCaseList = self.filter(byCaseType: "incoming")
         } else if sender.tag == 2 {
             x = btnActive.frame.origin.x
-            self.filteredCaseList = self.filter(byCaseType: "active")
         } else if sender.tag == 3 {
             x = btnCompleted.frame.origin.x
-            self.filteredCaseList = self.filter(byCaseType: "completed")
         }
         
         UIView.animate(withDuration: 0.22) {
@@ -173,10 +123,7 @@ fileprivate extension PatientListViewController {
 // MARK:- Public Extension -
 extension PatientListViewController {
     
-    func filter(byCaseType caseType: String) -> [Case] {
-        
-        return self.caseList.filter { $0.status == caseType }
-    }
+    
 }
 
 // MARK:- Override Methods -
@@ -208,50 +155,5 @@ extension PatientListViewController {
         } else {
             self.searchBar.becomeFirstResponder()
         }
-    }
-}
-
-// MARK:- TableView Delegate & DataSource -
-extension PatientListViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        if self.filteredCaseList.count > 0 {
-            self.lblEmptyData.isHidden = true
-            return self.filteredCaseList.count
-        } else {
-            self.lblEmptyData.isHidden = false
-        }
-        return 0
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell: PatientListCell = tableView.dequeueReusableCell(withIdentifier: "PatientListCell", for: indexPath) as! PatientListCell
-        cell.lblName.text = "\(self.filteredCaseList[indexPath.row].first_name == "unknown" ? "" : self.filteredCaseList[indexPath.row].first_name ?? "") \(self.filteredCaseList[indexPath.row].last_name == "unknown" ? "" : self.filteredCaseList[indexPath.row].last_name ?? "")"
-        cell.lblGender.text = self.filteredCaseList[indexPath.row].gender == "f" ? "Female" : "Male"
-        
-        if let dob = self.filteredCaseList[indexPath.row].dob {
-            let strDOB = self.calcAge(birthday: dob)
-            cell.lblAge.text = "\(strDOB)"
-        }
-        
-        cell.lblETA.text = ""
-        
-        if self.filteredCaseList[indexPath.row].eta != "" {
-            if let date = self.filteredCaseList[indexPath.row].eta!.toDate("yyyy-MM-dd HH:mm") {
-                cell.lblETA.text = date.toString("dd, MMM yyyy hh:mm a")
-            }
-        }
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let clinicianNavigation: MainContainerViewController = UIStoryboard.storyboard(.clinician).instantiate()
-        PrefsManager.setCaseID(userId: self.filteredCaseList[indexPath.row].case_id)
-        clinicianNavigation.selectedCase = self.filteredCaseList[indexPath.row]
-        self.navigate(to: clinicianNavigation)
     }
 }

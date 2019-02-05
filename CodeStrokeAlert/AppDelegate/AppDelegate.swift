@@ -13,7 +13,6 @@ import OneSignal
 import Firebase
 import UserNotifications
 import CoreLocation
-import Buglife
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -30,9 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         IQKeyboardManager.shared.enable = true
         
-        Buglife.shared().start(withEmail: "apps.jaypatel@gmail.com")
-        
         // Location Manager
+
         self.locationManager = CLLocationManager()
         
         if CLLocationManager.authorizationStatus() == .notDetermined {

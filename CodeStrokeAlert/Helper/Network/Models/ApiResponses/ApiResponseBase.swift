@@ -10,15 +10,14 @@ import Foundation
 
 // API Fields
 internal let API_SUCCESS = "success"
-internal let API_FAILURE = "debugmsg"
+internal let API_FAILURE = "failure_reason"
 internal let API_ACTION  = "action"
 
 // Failure reasons
 enum FailureReason: String {
-    case wrongCredentials       = "wrong_credentials"
-    case userNameAlreadyTaken   = "Username is already taken."
-    case notPassParam           = "Input parameters did not pass"
-    case none                   = "none"
+    case wrongCredentials = "wrong_credentials"
+    case upgradeNeeded    = "upgrade_needed"
+    case none             = "none"
 }
 
 // Response action
@@ -28,12 +27,7 @@ enum ResponseAction: String {
 }
 
 class ApiResponseBase {
-    
-    var success: Bool                   = false
-    var failureReason: FailureReason?   = nil
+    var success: Bool = false
+    var failureReason: FailureReason? = nil
     var responseAction: ResponseAction? = nil
-    
-    var destination: String                 = ""
-    var debugMsg: String                    = ""
-    var errorType: String                   = ""
 }
