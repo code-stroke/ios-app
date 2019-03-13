@@ -72,10 +72,62 @@ extension UIViewController {
         UIGraphicsEndImageContext()
         return image
     }
+    
+    // Set Gradient
+    func setGradientToButton(for button: UIButton, with cornerRadius: CGFloat) {
+        
+        let image = self.gradientWithFrametoImage(frame: button.frame, colors: [UIColor(red: 255/255, green: 105/255, blue: 97/255, alpha: 1).cgColor, UIColor(red: 255/255, green: 141/255, blue: 41/255, alpha: 1).cgColor])!
+        button.layer.cornerRadius = cornerRadius
+        button.backgroundColor = UIColor(patternImage: image)
+    }
+    
+    // Calculate Age
+    func calcAge(birthday: String) -> Int {
+        
+        let dateFormater = DateFormatter()
+        dateFormater.dateFormat = "yyyy/MM/dd"
+        let birthdayDate = dateFormater.date(from: birthday)
+        let calendar: NSCalendar! = NSCalendar(calendarIdentifier: .gregorian)
+        let now = Date()
+        let calcAge = calendar.components(.year, from: birthdayDate!, to: now, options: [])
+        let age = calcAge.year
+        return age!
+    }
+    
+    // Centre Button
+    func buttonCenter(scrollView: UIScrollView, button: UIButton) {
+        
+        let scrollWidth = scrollView.frame.width
+        let scrollHeight = scrollView.frame.height
+        let desiredXCoor = button.frame.origin.x - ((scrollWidth / 2) - (button.frame.width / 2) )
+        let rect = CGRect(x: desiredXCoor, y: 0, width: scrollWidth, height: scrollHeight)
+        scrollView.scrollRectToVisible(rect, animated: true)
+    }
 }
 
 // UIView
 extension UIView {
+    
+    func gradientWithFrametoImage(frame: CGRect, colors: [CGColor]) -> UIImage? {
+        
+        let gradient: CAGradientLayer  = CAGradientLayer(layer: self.layer)
+        gradient.frame = frame
+        gradient.colors = colors
+        UIGraphicsBeginImageContext(frame.size)
+        gradient.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+    
+    // Set Gradient
+    func setGradientToButton(for button: UIButton, with cornerRadius: CGFloat) {
+        
+        let image = self.gradientWithFrametoImage(frame: button.frame, colors: [UIColor(red: 255/255, green: 105/255, blue: 97/255, alpha: 1).cgColor, UIColor(red: 255/255, green: 141/255, blue: 41/255, alpha: 1).cgColor])!
+        button.layer.cornerRadius = cornerRadius
+        button.backgroundColor = UIColor(patternImage: image)
+    }
+    
     /// Create UIView's copy
     func copyView<T: UIView>() -> T {
         return NSKeyedUnarchiver.unarchiveObject(with: NSKeyedArchiver.archivedData(withRootObject: self)) as! T
@@ -446,6 +498,15 @@ extension String {
     var length : Int {
         return self.count
     }
+    
+    public func toDate( _ format:String) -> Date? {
+        
+        let formatter:DateFormatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.timeZone =  TimeZone.ReferenceType.local
+        formatter.dateFormat = format
+        return formatter.date(from: self)
+    }
 }
 
 // Bundle
@@ -585,5 +646,14 @@ extension Date {
         
         //Return Result
         return isEqualTo
+    }
+    
+    func toString( _ format:String) -> String? {
+        
+        let formatter:DateFormatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.timeZone =  NSTimeZone.local
+        formatter.dateFormat = format
+        return formatter.string(from: self)
     }
 }

@@ -9,12 +9,48 @@
 import UIKit
 import EVReflection
 
+let kClinicalAssessmentTwoData = "ClinicalAssessmentTwoData"
+let kClinicalAssessmentData = "ClinicalAssessmentData"
+let kClinicalAssessmentThreeData = "ClinicalAssessmentThreeData"
+
 class ClinicalAssessmentData: EVObject {
     
     var strFacialDroop: String          = ""
     var strArm_Drift: String            = ""
     var strWeak_Grip: String            = ""
     var strSpeechDifficulty: String     = ""
+    
+    func save() {
+        
+        let defaults: UserDefaults = UserDefaults.standard
+        let data: NSData = NSKeyedArchiver.archivedData(withRootObject: self) as NSData
+        defaults.set(data, forKey: kClinicalAssessmentData)
+        defaults.synchronize()
+    }
+    
+    class func savedUser() -> ClinicalAssessmentData? {
+        
+        let defaults: UserDefaults = UserDefaults.standard
+        let data = defaults.object(forKey: kClinicalAssessmentData) as? NSData
+        
+        if data != nil {
+            
+            if let userinfo = NSKeyedUnarchiver.unarchiveObject(with: data! as Data) as? ClinicalAssessmentData {
+                return userinfo
+            }
+            else {
+                return nil
+            }
+        }
+        return nil
+    }
+    
+    class func clearUser() {
+        
+        let defaults: UserDefaults = UserDefaults.standard
+        defaults.removeObject(forKey: kClinicalAssessmentData)
+        defaults.synchronize()
+    }
 }
 
 // MARK:- Outlets and Properties -
@@ -61,7 +97,7 @@ extension MassViewController {
 extension MassViewController {
     
     @IBAction func btnNextClicked(_ sender: UIButton) {
-        
+        ClinicalAssessmentData.clearUser()
         clinicalAssessmentData.strFacialDroop = self.btnFacialDroopUnknown.isSelected ? "unknown" : (self.btnFacialDropYes.isSelected ? "yes" : "no")
         clinicalAssessmentData.strArm_Drift = self.btnnArmDriftUnknown.isSelected ? "unknown" : (self.btnArmDriftYes.isSelected ? "yes" : "no")
         clinicalAssessmentData.strWeak_Grip = self.btnWeakGripUnknown.isSelected ? "unknown" : (self.btnWeakGripYes.isSelected ? "yes" : "no")
@@ -72,6 +108,7 @@ extension MassViewController {
                                            "Weak grip": clinicalAssessmentData.strWeak_Grip,
                                            "Speech Difficulty": clinicalAssessmentData.strSpeechDifficulty]
         
+        clinicalAssessmentData.save()
         var cellValue: [CellValues] = []
         
         arrValues.forEach { arrVal in

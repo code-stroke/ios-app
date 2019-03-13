@@ -20,8 +20,6 @@ extension MainViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,8 +36,8 @@ extension MainViewController {
 private extension MainViewController {
     
     func lunchApp() {
-        
-        if PrefsManager.getUserId() != 0 {
+
+        if UserManager.activeUser != nil {
             self.showClinicianFlow()
         } else {
             self.showLoginScreen()

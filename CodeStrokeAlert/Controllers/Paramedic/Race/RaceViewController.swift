@@ -15,6 +15,38 @@ class ClinicalAssessmentThreeData: EVObject {
     var strArm_Motor_Impair: String             = ""
     var strLeg_Motor_Impair: String             = ""
     var strHead_Gaze_Deviate: String            = ""
+    
+    func save() {
+        
+        let defaults: UserDefaults = UserDefaults.standard
+        let data: NSData = NSKeyedArchiver.archivedData(withRootObject: self) as NSData
+        defaults.set(data, forKey: kClinicalAssessmentThreeData)
+        defaults.synchronize()
+    }
+    
+    class func savedUser() -> ClinicalAssessmentThreeData? {
+        
+        let defaults: UserDefaults = UserDefaults.standard
+        let data = defaults.object(forKey: kClinicalAssessmentThreeData) as? NSData
+        
+        if data != nil {
+            
+            if let userinfo = NSKeyedUnarchiver.unarchiveObject(with: data! as Data) as? ClinicalAssessmentThreeData {
+                return userinfo
+            }
+            else {
+                return nil
+            }
+        }
+        return nil
+    }
+    
+    class func clearUser() {
+        
+        let defaults: UserDefaults = UserDefaults.standard
+        defaults.removeObject(forKey: kClinicalAssessmentThreeData)
+        defaults.synchronize()
+    }
 }
 
 // MARK:- Outlets and Properties -
@@ -120,11 +152,12 @@ extension RaceViewController {
         }
         
         let strRace = arm_motor_impair + leg_motor_impair + facial_palsy_race + head_gaze_deviate
-        
+        ClinicalAssessmentThreeData.clearUser()
         clinicalAssessmentThreeData.strFacial_Palsy_Race = String(facial_palsy_race)
         clinicalAssessmentThreeData.strArm_Motor_Impair = String(arm_motor_impair)
         clinicalAssessmentThreeData.strLeg_Motor_Impair = String(leg_motor_impair)
         clinicalAssessmentThreeData.strHead_Gaze_Deviate = String(head_gaze_deviate)
+        clinicalAssessmentThreeData.save()
         
         let arrValues: [String: String] = ["Race": "\(strRace)"]
         

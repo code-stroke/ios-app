@@ -101,13 +101,19 @@ extension PatientDetailViewController {
         // Do any additional setup after loading the view.
         
         // Initialize
-        self.initialise(withNavBarStyle: .standard, leftNavBarButtonType: .none, rightNavBarButtonType: .none, customImage: #imageLiteral(resourceName: "ic_logo.png"))
+        self.initialise(withNavBarStyle: .standard, leftNavBarButtonType: .back, rightNavBarButtonType: .none, customImage: #imageLiteral(resourceName: "ic_logo.png"))
         
         // Initialize the ViewModel
         self.viewModel = PatientDetailViewControllerViewModelImplementation(self)
         
         // Call Setup Method
         self.setup()
+    }
+    
+    override func backButtonTapped() {
+        self.dismiss(animated: true) {
+            
+        }
     }
 }
 
@@ -216,8 +222,53 @@ extension PatientDetailViewController {
             let sectionItem = SectionedItem(title: "Details", values: cellValue)
             sectionedItems.append(sectionItem)
             
-            let hospital: HospitalViewController = UIStoryboard.storyboard(.hospital).instantiate()
-            self.navigate(to: hospital)
+            NetworkModule.shared.setPatientDetails(first_name: self.btnFirstNameUnknown.isSelected ? "unknown" : self.txtFirstName.text!, last_name: self.btnSurnameUnknown.isSelected ? "unknown" : self.txtSurname.text!, dob: self.btnDOBUnknown.isSelected ? "" : self.strDOB, address: self.btnAddressUnknown.isSelected ? "unknown" : self.txtAddress.text!, gender: self.btnGenderUnspecified.isSelected ? "u" : (segmentGender.selectedSegmentIndex == 0 ? "m" : "f"), last_well: self.btnDateUnknown.isSelected ? "" : self.strLastSeen, nok: self.btnNextToKINUnknown.isSelected ? "unknown" : self.txtNextToKIN.text!, nok_phone: self.btnNOKTelephoneUnknown.isSelected ? "unknown" : self.txtNOKTelephone.text!, hospital_id: "1", initial_location_lat: "-37.9150", initial_location_long: "145.1300", onSuccess: { apiResponsePatientInfo in
+                
+                print(apiResponsePatientInfo)
+                
+                PrefsManager.setCaseID(userId: apiResponsePatientInfo.caseId)
+                
+            }, onFailure: { failureReason in
+                
+                // Switch failure reason
+                if failureReason == .wrongCredentials {
+                    print(failureReason)
+                }
+                
+            }, onAction: { responseAction in
+                
+                // Show alert for response action
+                if responseAction == .actionUpdate {
+                    
+                }
+                
+            }, onError: { error in
+                // Show alert for error
+            }, onComplete: { success in
+                
+                // Show Alert
+                if success {
+                    // Create Alert Controller
+                    let alertController = PGAlertViewController(title: "CodeStrokeAlert", message: "Submitted successfully", style: .success, dismissable: false, actions: [PGAlertAction(title: "OK", style: .normal, handler: {
+                        
+                        let pastMedicalHistoryVC: PastMedicalHistoryViewController = UIStoryboard.storyboard(.medical).instantiate()
+                        self.navigate(to: pastMedicalHistoryVC)
+                        
+                    }) ])
+                    
+                    // Show alert controller
+                    self.present(alertController, animated: true, completion: nil)
+                } else {
+
+                    // Create Alert Controller
+                    let alertController = PGAlertViewController(title: "CodeStrokeAlert", message: "Error while submitting data", style: .error, dismissable: true, actions: [PGAlertAction(title: "OK", style: .normal, handler: {
+                        
+                    }) ])
+                    
+                    // Show alert controller
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            })
         }
     }
 }
@@ -250,7 +301,9 @@ private extension PatientDetailViewController {
         self.lblAMPM.text = arrayDate[4]
         
         f.setLocal()
+        f.dateFormat = "yyyy-MM-dd hh:mm:ss"
         self.strLastSeen = f.string(from: Date())
+        self.strDOB = self.strLastSeen
     }
     
     // Formats the date chosen with the date picker.
@@ -279,6 +332,7 @@ private extension PatientDetailViewController {
             self.lblAMPM.text = arrayDate[4]
             
             f.setLocal()
+            f.dateFormat = "yyyy-MM-dd hh:mm:ss"
             self.strLastSeen = f.string(from: sender.date)
             
         } else {
@@ -289,6 +343,7 @@ private extension PatientDetailViewController {
             self.txtDOB.text = formattedDate
             
             f.setLocal()
+            f.dateFormat = "yyyy-MM-dd hh:mm:ss"
             self.strDOB = f.string(from: sender.date)
         }
     }

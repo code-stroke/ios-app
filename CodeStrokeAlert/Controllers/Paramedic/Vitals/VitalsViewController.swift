@@ -19,6 +19,38 @@ class ClinicalAssessmentTwoData: EVObject {
     var strTemperature: String                  = ""
     var strBlood_Glucose: String                = ""
     var strGCS: String                          = ""
+    
+    func save() {
+        
+        let defaults: UserDefaults = UserDefaults.standard
+        let data: NSData = NSKeyedArchiver.archivedData(withRootObject: self) as NSData
+        defaults.set(data, forKey: kClinicalAssessmentTwoData)
+        defaults.synchronize()
+    }
+    
+    class func savedUser() -> ClinicalAssessmentTwoData? {
+        
+        let defaults: UserDefaults = UserDefaults.standard
+        let data = defaults.object(forKey: kClinicalAssessmentTwoData) as? NSData
+        
+        if data != nil {
+            
+            if let userinfo = NSKeyedUnarchiver.unarchiveObject(with: data! as Data) as? ClinicalAssessmentTwoData {
+                return userinfo
+            }
+            else {
+                return nil
+            }
+        }
+        return nil
+    }
+    
+    class func clearUser() {
+        
+        let defaults: UserDefaults = UserDefaults.standard
+        defaults.removeObject(forKey: kClinicalAssessmentTwoData)
+        defaults.synchronize()
+    }
 }
 
 // MARK:- Outlets and Properties -
@@ -116,13 +148,14 @@ extension VitalsViewController {
     
     @IBAction func btnNextClicked(_ sender: UIButton) {
         
-        clinicalAssessmentTwoData.strBlood_Pressure = isEmptyString(self.txtBloodPressure.text!) ? "NULL" : self.txtBloodPressure.text!
-        clinicalAssessmentTwoData.strHeart_Rate = isEmptyString(self.txtHeartRate.text!) ? "NULL" : self.txtHeartRate.text!
+        ClinicalAssessmentTwoData.clearUser()
+        clinicalAssessmentTwoData.strBlood_Pressure = isEmptyString(self.txtBloodPressure.text!) ? "" : self.txtBloodPressure.text!
+        clinicalAssessmentTwoData.strHeart_Rate = isEmptyString(self.txtHeartRate.text!) ? "" : self.txtHeartRate.text!
         clinicalAssessmentTwoData.strHeart_Rhythm = self.btnRegular.isSelected ? "regular" : "irregular"
-        clinicalAssessmentTwoData.strRespiratory_Rate = isEmptyString(self.txtRespiratoryRate.text!) ? "NULL" : self.txtRespiratoryRate.text!
-        clinicalAssessmentTwoData.strOxygen_Saturation = isEmptyString(self.txtOxygenSaturation.text!) ? "NULL" : self.txtOxygenSaturation.text!
-        clinicalAssessmentTwoData.strTemperature = isEmptyString(self.txtTemperature.text!) ? "NULL" : self.txtTemperature.text!
-        clinicalAssessmentTwoData.strBlood_Glucose = isEmptyString(self.txtBloodGlucose.text!) ? "NULL" : self.txtBloodGlucose.text!
+        clinicalAssessmentTwoData.strRespiratory_Rate = isEmptyString(self.txtRespiratoryRate.text!) ? "" : self.txtRespiratoryRate.text!
+        clinicalAssessmentTwoData.strOxygen_Saturation = isEmptyString(self.txtOxygenSaturation.text!) ? "" : self.txtOxygenSaturation.text!
+        clinicalAssessmentTwoData.strTemperature = isEmptyString(self.txtTemperature.text!) ? "" : self.txtTemperature.text!
+        clinicalAssessmentTwoData.strBlood_Glucose = isEmptyString(self.txtBloodGlucose.text!) ? "" : self.txtBloodGlucose.text!
         
         var gscSelected = 0
         
@@ -172,6 +205,7 @@ extension VitalsViewController {
                                            "Temperature": clinicalAssessmentTwoData.strTemperature,
                                            "Blood Glucose": clinicalAssessmentTwoData.strBlood_Glucose,
                                            "GCS": clinicalAssessmentTwoData.strGCS]
+        clinicalAssessmentTwoData.save()
         
         var cellValue: [CellValues] = []
         

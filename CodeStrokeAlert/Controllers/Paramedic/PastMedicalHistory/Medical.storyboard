@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z1F-ZH-MLd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z1F-ZH-MLd">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -51,10 +51,10 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="355" height="30"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="tTB-qQ-l9W">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="52" height="30"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
                                                                         <subviews>
                                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tSY-pD-DPs">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="52" height="30"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
                                                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
                                                                                 <state key="normal" title="  IHD" image="ic_unchecked">
                                                                                     <color key="titleColor" red="0.7725490196" green="0.82352941180000006" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -67,10 +67,10 @@
                                                                         </subviews>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NEa-58-3cT">
-                                                                        <rect key="frame" x="86.5" y="0.0" width="50" height="30"/>
+                                                                        <rect key="frame" x="88.5" y="0.0" width="43" height="30"/>
                                                                         <subviews>
                                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqD-EY-xSF">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="43" height="30"/>
                                                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
                                                                                 <state key="normal" title="  DM" image="ic_unchecked">
                                                                                     <color key="titleColor" red="0.7725490196" green="0.82352941180000006" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -83,10 +83,10 @@
                                                                         </subviews>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="aDN-Xk-0de">
-                                                                        <rect key="frame" x="170.5" y="0.0" width="69" height="30"/>
+                                                                        <rect key="frame" x="175.5" y="0.0" width="62" height="30"/>
                                                                         <subviews>
                                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8aH-zy-Bgf">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="69" height="30"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="62" height="30"/>
                                                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
                                                                                 <state key="normal" title="  Stroke" image="ic_unchecked">
                                                                                     <color key="titleColor" red="0.7725490196" green="0.82352941180000006" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -99,10 +99,10 @@
                                                                         </subviews>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ur5-rp-QTq">
-                                                                        <rect key="frame" x="274" y="0.0" width="81" height="30"/>
+                                                                        <rect key="frame" x="281" y="0.0" width="74" height="30"/>
                                                                         <subviews>
                                                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FyZ-og-tF9" userLabel="Epilepsy">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="81" height="30"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="74" height="30"/>
                                                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
                                                                                 <state key="normal" title="  Epilepsy" image="ic_unchecked">
                                                                                     <color key="titleColor" red="0.7725490196" green="0.82352941180000006" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -123,10 +123,10 @@
                                                                 <rect key="frame" x="0.0" y="38" width="355" height="30"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XXI-P6-xVE">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="39" height="30"/>
                                                                         <subviews>
                                                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQW-ep-d8D">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="39" height="30"/>
                                                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
                                                                                 <state key="normal" title="  AF" image="ic_unchecked">
                                                                                     <color key="titleColor" red="0.7725490196" green="0.82352941180000006" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -139,10 +139,10 @@
                                                                         </subviews>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dee-TR-EKJ">
-                                                                        <rect key="frame" x="143" y="0.0" width="212" height="30"/>
+                                                                        <rect key="frame" x="151" y="0.0" width="204" height="30"/>
                                                                         <subviews>
                                                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bT-zn-BsO">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="212" height="30"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="204" height="30"/>
                                                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
                                                                                 <state key="normal" title="  Other neurological conditions" image="ic_unchecked">
                                                                                     <color key="titleColor" red="0.7725490196" green="0.82352941180000006" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -168,7 +168,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anticoagulants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjZ-ps-E38">
-                                                        <rect key="frame" x="15" y="193" width="120" height="40"/>
+                                                        <rect key="frame" x="15" y="193" width="121" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="gmQ-rg-NB6"/>
                                                         </constraints>
@@ -176,11 +176,11 @@
                                                         <color key="textColor" red="0.3294117647" green="0.43529411759999997" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mbc-4Q-O9o">
-                                                        <rect key="frame" x="150" y="193" width="210" height="40"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mbc-4Q-O9o">
+                                                        <rect key="frame" x="151" y="193" width="209" height="40"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a18-B6-RCu">
-                                                                <rect key="frame" x="0.0" y="0.0" width="101" height="40"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="52" height="40"/>
                                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
                                                                 <state key="normal" title="  Yes" image="ic_ovel_deselect">
                                                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -193,7 +193,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZt-py-yPB">
-                                                                <rect key="frame" x="109" y="0.0" width="101" height="40"/>
+                                                                <rect key="frame" x="60" y="0.0" width="47" height="40"/>
                                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
                                                                 <state key="normal" title="  No" image="ic_ovel_deselect">
                                                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -205,6 +205,19 @@
                                                                     <action selector="btnAnnticoagulantsClicked:" destination="Z1F-ZH-MLd" eventType="touchUpInside" id="IRo-eG-gNo"/>
                                                                 </connections>
                                                             </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="937-OX-YoH">
+                                                                <rect key="frame" x="115" y="0.0" width="94" height="40"/>
+                                                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                                                <state key="normal" title="  Unknown" image="ic_ovel_deselect">
+                                                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <state key="selected" image="ic_ovel_selected">
+                                                                    <color key="titleColor" red="0.20000000000000001" green="0.41176470590000003" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="btnAnnticoagulantsClicked:" destination="Z1F-ZH-MLd" eventType="touchUpInside" id="t41-nL-iq2"/>
+                                                                </connections>
+                                                            </button>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="A0H-aL-oOd">
@@ -214,10 +227,10 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="355" height="30"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Bud-HY-SPw">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="87" height="30"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
                                                                         <subviews>
                                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHd-lp-zDw" userLabel="Apixaban">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="87" height="30"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
                                                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
                                                                                 <state key="normal" title="  Apixaban" image="ic_unchecked">
                                                                                     <color key="titleColor" red="0.7725490196" green="0.82352941180000006" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -230,10 +243,10 @@
                                                                         </subviews>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="GSt-il-aWw">
-                                                                        <rect key="frame" x="128" y="0.0" width="106" height="30"/>
+                                                                        <rect key="frame" x="131.5" y="0.0" width="98" height="30"/>
                                                                         <subviews>
                                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qY4-9i-W7H" userLabel="Rivaroxaban">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="106" height="30"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="98" height="30"/>
                                                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
                                                                                 <state key="normal" title="  Rivaroxaban" image="ic_unchecked">
                                                                                     <color key="titleColor" red="0.7725490196" green="0.82352941180000006" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -246,10 +259,10 @@
                                                                         </subviews>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="YSx-ZR-xdG">
-                                                                        <rect key="frame" x="275" y="0.0" width="80" height="30"/>
+                                                                        <rect key="frame" x="281" y="0.0" width="74" height="30"/>
                                                                         <subviews>
                                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCE-Ik-tlQ" userLabel="Warfarin">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="74" height="30"/>
                                                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
                                                                                 <state key="normal" title="  Warfarin" image="ic_unchecked">
                                                                                     <color key="titleColor" red="0.7725490196" green="0.82352941180000006" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -270,10 +283,10 @@
                                                                 <rect key="frame" x="0.0" y="38" width="355" height="30"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Cm3-am-xRh">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="97" height="30"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
                                                                         <subviews>
                                                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zZ-GJ-H0Z" userLabel="Dabigatran">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="97" height="30"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
                                                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
                                                                                 <state key="normal" title="  Dabigatran" image="ic_unchecked">
                                                                                     <color key="titleColor" red="0.7725490196" green="0.82352941180000006" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -286,10 +299,10 @@
                                                                         </subviews>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7oe-c3-pd7">
-                                                                        <rect key="frame" x="105" y="0.0" width="77" height="30"/>
+                                                                        <rect key="frame" x="98" y="0.0" width="71" height="30"/>
                                                                         <subviews>
                                                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fww-J8-XTr" userLabel="Heparin">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="77" height="30"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="71" height="30"/>
                                                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
                                                                                 <state key="normal" title="  Heparin" image="ic_unchecked">
                                                                                     <color key="titleColor" red="0.7725490196" green="0.82352941180000006" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -302,10 +315,10 @@
                                                                         </subviews>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="I0V-S2-l5g">
-                                                                        <rect key="frame" x="190" y="0.0" width="165" height="30"/>
+                                                                        <rect key="frame" x="177" y="0.0" width="178" height="30"/>
                                                                         <subviews>
                                                                             <button hidden="YES" opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gej-Zt-v1g" userLabel="Heparin">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="20"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="17"/>
                                                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                                                                 <state key="normal" image="ic_unchecked">
                                                                                     <color key="titleColor" red="0.7725490196" green="0.82352941180000006" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -335,6 +348,9 @@
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="Z1F-ZH-MLd" id="fof-Vz-sR0"/>
+                                                                </connections>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Situation (HOPC)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0VV-lO-Lee">
                                                                 <rect key="frame" x="0.0" y="48" width="355" height="40"/>
@@ -436,6 +452,7 @@
                     <connections>
                         <outlet property="btnAF" destination="hQW-ep-d8D" id="V6l-4E-sch"/>
                         <outlet property="btnAnticoagulantsNo" destination="qZt-py-yPB" id="YOp-Ab-w7p"/>
+                        <outlet property="btnAnticoagulantsUnknown" destination="937-OX-YoH" id="k37-mf-iwb"/>
                         <outlet property="btnAnticoagulantsYes" destination="a18-B6-RCu" id="jP4-Ib-tkp"/>
                         <outlet property="btnApixaban" destination="kHd-lp-zDw" id="5dW-Yq-DZd"/>
                         <outlet property="btnDM" destination="MqD-EY-xSF" id="QOS-of-HcN"/>
@@ -461,9 +478,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_checked" width="20" height="20"/>
+        <image name="ic_checked" width="15" height="15"/>
         <image name="ic_ovel_deselect" width="19" height="19"/>
         <image name="ic_ovel_selected" width="19" height="19"/>
-        <image name="ic_unchecked" width="20" height="20"/>
+        <image name="ic_unchecked" width="15" height="15"/>
     </resources>
 </document>

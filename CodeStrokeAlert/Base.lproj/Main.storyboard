@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q56-LV-hiU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q56-LV-hiU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,17 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_splash" translatesAutoresizingMaskIntoConstraints="NO" id="lGU-8p-W7W">
-                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_icon_splash" translatesAutoresizingMaskIntoConstraints="NO" id="lGU-8p-W7W">
+                                <rect key="frame" x="50" y="196" width="275" height="275"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="lGU-8p-W7W" secondAttribute="height" multiplier="1:1" id="In9-QI-kUy"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.91764705879999997" green="0.79607843140000001" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="lGU-8p-W7W" firstAttribute="centerX" secondItem="RZk-Ur-8wn" secondAttribute="centerX" id="3W4-Yt-IMm"/>
-                            <constraint firstItem="lGU-8p-W7W" firstAttribute="leading" secondItem="RZk-Ur-8wn" secondAttribute="leading" id="6Tq-T2-JqB"/>
+                            <constraint firstItem="lGU-8p-W7W" firstAttribute="leading" secondItem="RZk-Ur-8wn" secondAttribute="leading" constant="50" id="6Tq-T2-JqB"/>
                             <constraint firstItem="lGU-8p-W7W" firstAttribute="centerY" secondItem="RZk-Ur-8wn" secondAttribute="centerY" id="f6s-Wr-g6a"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bmE-lO-2ou"/>
@@ -40,6 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_splash" width="1024" height="1024"/>
+        <image name="ic_icon_splash" width="1024" height="1024"/>
     </resources>
 </document>

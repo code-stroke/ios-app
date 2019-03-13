@@ -71,7 +71,7 @@ extension CannulaViewController {
     
     @IBAction func btnNextClicked(_ sender: UIButton) {
 
-        cannulaData.cannula = self.btn18GIVYes.isSelected ? "Yes" : "No"
+        cannulaData.cannula = self.btn18GIVYes.isSelected ? "yes" : "no"
         let arrValues: [String: String] = ["Cannuala": "\(cannulaData.cannula)"]
         
         var cellValue: [CellValues] = []
@@ -86,8 +86,55 @@ extension CannulaViewController {
         let sectionItem = SectionedItem(title: "18G IV", values: cellValue)
         sectionedItems.append(sectionItem)
         
-        let summaryVC: SummaryViewController = UIStoryboard.storyboard(.summary).instantiate()
-        self.navigate(to: summaryVC)
+        NetworkModule.shared.setClinicalAssessment(facial_droop: ClinicalAssessmentData.savedUser()!.strFacialDroop,
+                                                   arm_drift: ClinicalAssessmentData.savedUser()!.strArm_Drift,
+                                                   weak_grip: ClinicalAssessmentData.savedUser()!.strWeak_Grip,
+                                                   speech_difficulty: ClinicalAssessmentData.savedUser()!.strSpeechDifficulty,
+                                                   bp_systolic: ClinicalAssessmentTwoData.savedUser()!.strBlood_Pressure,
+                                                   heart_rate: ClinicalAssessmentTwoData.savedUser()!.strHeart_Rate,
+                                                   heart_rhythm: ClinicalAssessmentTwoData.savedUser()!.strHeart_Rhythm,
+                                                   rr: ClinicalAssessmentTwoData.savedUser()!.strRespiratory_Rate,
+                                                   o2sats: ClinicalAssessmentTwoData.savedUser()!.strOxygen_Saturation,
+                                                   temp: ClinicalAssessmentTwoData.savedUser()!.strTemperature,
+                                                   gcs: ClinicalAssessmentTwoData.savedUser()!.strGCS,
+                                                   blood_glucose: ClinicalAssessmentTwoData.savedUser()!.strBlood_Glucose,
+                                                   facial_palsy_race: ClinicalAssessmentThreeData.savedUser()!.strFacial_Palsy_Race,
+                                                   arm_motor_impair: ClinicalAssessmentThreeData.savedUser()!.strArm_Motor_Impair,
+                                                   leg_motor_impair: ClinicalAssessmentThreeData.savedUser()!.strLeg_Motor_Impair,
+                                                   head_gaze_deviate: ClinicalAssessmentThreeData.savedUser()!.strHead_Gaze_Deviate,
+                                                   cannula: cannulaData.cannula, onSuccess: { apiResponseClinicalAssessmentInfo in
+            
+        }, onFailure: { failureReason in
+            
+        }, onAction: { responseAction in
+            
+        }, onError: { error in
+            // Show alert for error
+        }, onComplete: { success in
+            
+            // Show Alert
+            if success {
+                // Create Alert Controller
+                let alertController = PGAlertViewController(title: "CodeStrokeAlert", message: "Submitted successfully", style: .success, dismissable: false, actions: [PGAlertAction(title: "OK", style: .normal, handler: {
+                    
+                    let summaryVC: SummaryViewController = UIStoryboard.storyboard(.summary).instantiate()
+                    self.navigate(to: summaryVC)
+                    
+                }) ])
+                
+                // Show alert controller
+                self.present(alertController, animated: true, completion: nil)
+            } else {
+                
+                // Create Alert Controller
+                let alertController = PGAlertViewController(title: "CodeStrokeAlert", message: "Error while submitting data", style: .error, dismissable: true, actions: [PGAlertAction(title: "OK", style: .normal, handler: {
+                    
+                }) ])
+                
+                // Show alert controller
+                self.present(alertController, animated: true, completion: nil)
+            }
+        })
     }
 }
 

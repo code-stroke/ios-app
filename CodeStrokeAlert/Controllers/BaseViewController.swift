@@ -44,6 +44,9 @@ internal enum RightNavigationBarButtonType {
     
     // Right navigation bar button is the search button
     case search
+    
+    // Left navigation bar button is the add button (+) for adding paramedic
+    case add
 }
 
 // MARK:- Properties -
@@ -177,7 +180,7 @@ fileprivate extension BaseViewController {
             
             // Show close button
             self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "Cross lines"), style: .plain, target: self, action: #selector(self.backButtonTapped))
-            
+        
         case .none:
             
             // Don't show any button
@@ -195,6 +198,11 @@ fileprivate extension BaseViewController {
             
             // Show search button
             self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_search.png"), style: .plain, target: self, action: #selector(self.searchButtonTapped))
+            
+        case .add:
+            
+            // Show add button
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.addParamedicButtonTapped))
             
         case .none:
             
@@ -256,6 +264,14 @@ extension BaseViewController {
             return
         }
         navController.popViewController(animated: true)
+    }
+    
+    /// Move to Paramedic work flow on add button tap
+    @objc func addParamedicButtonTapped() {
+        
+        // Go to paramedic work flow
+        let paramedicNavigation: ParamedicNavigationController = UIStoryboard.storyboard(.patientdetail).instantiate()
+        self.present(paramedicNavigation, animated: true, completion: nil)
     }
     
     /// Back to main view controller

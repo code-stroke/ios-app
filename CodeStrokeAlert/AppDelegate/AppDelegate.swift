@@ -10,15 +10,15 @@ import UIKit
 import CoreData
 import IQKeyboardManagerSwift
 import OneSignal
-import Firebase
 import UserNotifications
 import CoreLocation
+import Buglife
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    private let appID = "a704a88e-9e37-41f6-99b8-6ded41926c03"
+    private let appID = "5bb4e608-37b2-477b-b59e-db94fe3b3667"
     var deviceTokenString = "123"
     var Case_ID = 0
     var arrForGroupMembers = [String]()
@@ -29,8 +29,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         IQKeyboardManager.shared.enable = true
         
+        Buglife.shared().start(withEmail: "apps.jaypatel@gmail.com")
+        
         // Location Manager
-
         self.locationManager = CLLocationManager()
         
         if CLLocationManager.authorizationStatus() == .notDetermined {
@@ -41,9 +42,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.locationManager?.distanceFilter = 200 // The minimum distance (measured in meters) a device must move horizontally before an update event is generated.
         self.locationManager?.delegate = self
 
-        //Firebase
-        FirebaseApp.configure()
-        
         registerForPushNotifications()
         
         if let launchOptions = launchOptions {

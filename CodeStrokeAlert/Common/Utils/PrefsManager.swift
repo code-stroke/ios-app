@@ -12,6 +12,10 @@ import EVReflection
 let USER_TYPE: String           = "userType"
 let USER_ROLE: String           = "userRole"
 let LOGIN_USER_ID: String       = "userId"
+let CASE_ID: String             = "caseId"
+let TOKENINFO: String           = "userInfo"
+let USERPASS: String            = ""
+let ENTEREDCREDS: String        = "creds"
 
 enum UserRole: String {
     
@@ -53,6 +57,22 @@ class PrefsManager {
         return userType
     }
     
+    // Get Pass
+    static func setPass(password: String) {
+        
+        UserDefaults.standard.set(password, forKey: USERPASS)
+    }
+    
+    // Get Pass
+    static func getPass() -> String {
+        
+        guard let userPass = UserDefaults.standard.string(forKey: USERPASS) else {
+            return ""
+        }
+        
+        return userPass
+    }
+    
     // Set User Role
     static func setUserRole(userRole: String) {
         
@@ -81,6 +101,26 @@ class PrefsManager {
         return UserDefaults.standard.integer(forKey: LOGIN_USER_ID)
     }
     
+    // Set Case ID
+    static func setCaseID(userId: Int) {
+        
+        UserDefaults.standard.set(userId, forKey: CASE_ID)
+    }
+    
+    // Get Case ID
+    static func getCaseID() -> Int {
+        
+        return UserDefaults.standard.integer(forKey: CASE_ID)
+    }
+    
+    // Clear Case ID
+    static func clearCaseID() {
+        
+        let defaults: UserDefaults = UserDefaults.standard
+        defaults.removeObject(forKey: CASE_ID)
+        defaults.synchronize()
+    }
+    
     // Save EVObject in PrefManager
     static func saveData(for key: String, and data: EVObject) {
         
@@ -98,8 +138,8 @@ class PrefsManager {
         
         if data != nil {
             
-            if let userinfo = NSKeyedUnarchiver.unarchiveObject(with: data! as Data) {
-                return (userinfo as! EVObject)
+            if let info = NSKeyedUnarchiver.unarchiveObject(with: data! as Data) {
+                return (info as! EVObject)
             }
             else {
                 return nil

@@ -35,6 +35,7 @@ class PastMedicalHistoryViewController: BaseViewController {
     @IBOutlet weak var txtMedications: UITextField!
     @IBOutlet weak var btnAnticoagulantsYes: UIButton!
     @IBOutlet weak var btnAnticoagulantsNo: UIButton!
+    @IBOutlet weak var btnAnticoagulantsUnknown: UIButton!
     
     @IBOutlet weak var btnApixaban: UIButton!
     @IBOutlet weak var btnRivaroxaban: UIButton!
@@ -106,15 +107,20 @@ extension PastMedicalHistoryViewController {
         
         if btnIHD.isSelected {
             strPostMdHistory.append("IHD,")
-        } else if btnDM.isSelected {
+        }
+        if btnDM.isSelected {
             strPostMdHistory.append("DM,")
-        } else if btnStroke.isSelected {
+        }
+        if btnStroke.isSelected {
             strPostMdHistory.append("Stroke,")
-        } else if btnEpilepsy.isSelected {
+        }
+        if btnEpilepsy.isSelected {
             strPostMdHistory.append("Epilepsy,")
-        } else if btnAF.isSelected {
+        }
+        if btnAF.isSelected {
             strPostMdHistory.append("AF,")
-        } else if btnOther.isSelected {
+        }
+        if btnOther.isSelected {
             strPostMdHistory.append("Other neurological conditions")
         }
         
@@ -172,8 +178,51 @@ extension PastMedicalHistoryViewController {
         let sectionItem = SectionedItem(title: "History", values: cellValue)
         sectionedItems.append(sectionItem)
         
-        let massVC: MassViewController = UIStoryboard.storyboard(.mass).instantiate()
-        self.navigate(to: massVC)
+        NetworkModule.shared.setClinicalHistory(pmhx: strPostMdHistory, meds: strMedication, anticoags: self.btnAnticoagulantsUnknown.isSelected ? "unknown" : (self.btnAnticoagulantsYes.isSelected ? "yes" : "no"), hopc: strSituation, weight: Float(strWeight)!, last_meal: strLastMealDate, onSuccess: { apiResponseClinicalInfo in
+            
+            print(apiResponseClinicalInfo)
+            
+        }, onFailure: { failureReason in
+            
+            // Switch failure reason
+            if failureReason == .wrongCredentials {
+                print(failureReason)
+            }
+            
+        }, onAction: { responseAction in
+            
+            // Show alert for response action
+            if responseAction == .actionUpdate {
+                
+            }
+            
+        }, onError: { error in
+            // Show alert for error
+        }, onComplete: { success in
+            
+            // Show Alert
+            if success {
+                // Create Alert Controller
+                let alertController = PGAlertViewController(title: "CodeStrokeAlert", message: "Submitted successfully", style: .success, dismissable: false, actions: [PGAlertAction(title: "OK", style: .normal, handler: {
+                    
+                    let massVC: MassViewController = UIStoryboard.storyboard(.mass).instantiate()
+                    self.navigate(to: massVC)
+                    
+                }) ])
+                
+                // Show alert controller
+                self.present(alertController, animated: true, completion: nil)
+            } else {
+                
+                // Create Alert Controller
+                let alertController = PGAlertViewController(title: "CodeStrokeAlert", message: "Error while submitting data", style: .error, dismissable: true, actions: [PGAlertAction(title: "OK", style: .normal, handler: {
+                    
+                }) ])
+                
+                // Show alert controller
+                self.present(alertController, animated: true, completion: nil)
+            }
+        })
     }
 }
 
@@ -187,8 +236,46 @@ fileprivate extension PastMedicalHistoryViewController {
     }
 }
 
+// MARK: - UITextField Delegate -
+extension PastMedicalHistoryViewController: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+
+        
+        // Create a date picker for the date field.
+        let picker = UIDatePicker()
+        picker.addTarget(self, action: #selector(updateDateField(sender:)), for: .valueChanged)
+        textField.inputView = picker
+        
+        picker.datePickerMode = .dateAndTime
+        
+        // If the date field has focus, display a date picker instead of keyboard.
+        // Set the text to the date currently displayed by the picker.
+        textField.text = formatDateForDisplay(date: picker.date)
+    }
+}
+
 // MARK:- Public Methods -
 extension PastMedicalHistoryViewController {
     
+    // Called when the date picker changes.
+    @objc func updateDateField(sender: UIDatePicker) {
+        
+        let f = DateFormatter()
+        
+        f.dateFormat = "MMM dd, yyyy"
+        let formattedDate: String = f.string(from: sender.date)
+        self.txtLastDate.text = formattedDate
+        
+        f.setLocal()
+        f.dateFormat = "yyyy-MM-dd hh:mm:ss"
+        self.strLastMealDate = f.string(from: sender.date)
+    }
     
+    // Formats the date chosen with the date picker.
+    func formatDateForDisplay(date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd MMM yyyy"
+        return formatter.string(from: date)
+    }
 }

@@ -14,17 +14,13 @@ target 'CodeStrokeAlert' do
     pod 'EVReflection/Alamofire'
     pod 'SVProgressHUD'
     pod 'OneSignal'
-    pod 'Firebase/Core'
-    pod 'Firebase/Database'
-    pod 'Firebase/Auth'
-    pod 'Firebase/Storage'
-    pod 'Firebase/Messaging'
-    pod 'Firebase/RemoteConfig'
     pod 'Toaster', '~> 2.0'
     pod 'SDWebImage', '~> 4.1’
     pod 'ASBPlayerScrubbing'
     pod 'AKMediaViewer'
     pod 'lottie-ios'
     pod 'Buglife'
+    pod 'SwiftOTP'
+    pod 'DropDown'
     
 end
